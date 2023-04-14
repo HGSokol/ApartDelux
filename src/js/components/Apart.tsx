@@ -14,10 +14,10 @@ function Apart(props: ApartProps) {
 	return (
 		<div
 			onClick={() => setActivePopup(true)}
-			className={`lg:w-[400rem] lg:h-[304rem] lg:relative lg:bg-cover lg:bg-no-repeat`}
+			className={`w-[122rem] h-[122rem] lg:w-[400rem] lg:h-[304rem] relative bg-cover bg-no-repeat`}
 			style={{ backgroundImage: `url(${items.img})` }}>
-			<div className="lg:bg-[#A1A1A1CC]/[0.8] lg:w-[200rem] lg:h-[54rem] lg:absolute lg:left-0 lg:bottom-0 lg:text-[22rem] lg:text-[#171717] lg:font1 lg:font-[700] lg:leading-[21rem] lg:flex lg:items-center lg:justify-center">
-				{items.name}
+			<div className="bg-[#A1A1A1CC]/[0.8] w-[27rem] h-[23rem] lg:w-[200rem] lg:h-[54rem] absolute left-0 bottom-0 text-[12rem] leading-[11rem] lg:text-[22rem] text-[#171717] font1 font-[700] lg:leading-[21rem] flex items-center justify-center">
+				{window.innerWidth >= 1024 ? `Deluxe Apart ${items.name}` : `${items.name}`}
 			</div>
 		</div>
 	);

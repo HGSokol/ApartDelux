@@ -13,13 +13,15 @@ function Preview() {
 	];
 
 	return (
-		<div id="about" className="lg:mb-[143rem] lg:flex lg:flex-row lg:gap-[175rem]">
-			<div className="lg:text-white">
-				<div className="lg:flex lg:flex-row lg:items-center lg:gap-[50rem] lg:mb-[24rem]">
-					<div className="lg:font1 lg:font-[700] lg:text-[60rem] lg:leading-[57rem]">
+		<div
+			id="about"
+			className="mx-[20rem] lg:mx-0 mb-[77rem] lg:mb-[143rem] flex flex-col lg:flex-row lg:gap-[175rem]">
+			<div className="text-white">
+				<div className="flex flex-row items-center lg:gap-[50rem] lg:mb-[24rem] mb-[25rem]">
+					<div className="font1 font-[700] text-[44rem] leading-[42rem] lg:text-[60rem] lg:leading-[57rem]">
 						Deluxe Apart{' '}
 					</div>
-					<div className="lg:font1 lg:font-[700] lg:text-[60rem] lg:leading-[57rem] text-white">
+					<div className="hidden lg:font1 lg:font-[700] lg:text-[60rem] lg:leading-[57rem] text-white">
 						<svg
 							width="56"
 							height="1"
@@ -30,13 +32,13 @@ function Preview() {
 						</svg>
 					</div>
 				</div>
-				<div className="lg:w-[550rem] lg:font2 lg:font-[400] lg:text-[24rem] lg:leading-[30rem] lg:text-[#C4C4C4]">
+				<div className="lg:w-[550rem] mb-[43rem] lg:mb-0 font2 font-[400] text-[20rem] leading-[25rem] lg:text-[24rem] lg:leading-[30rem] text-[#C4C4C4]">
 					Студия, в которой найдется квартира для Вас на любой вкус. Все апартаменты находятся в
 					самом сердце г. Бреста. Мы предлагаем Вам все удобства, необходимые для проживания как на
 					короткий, так и на длительный срок.
 				</div>
 			</div>
-			<div className="lg:flex lg:flex-row lg:gap-[32rem]">
+			<div className="flex flex-row gap-[20rem] lg:gap-[32rem]">
 				{achievement.map((e, i) => {
 					return (
 						<div key={i}>

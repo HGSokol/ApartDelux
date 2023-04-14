@@ -20,48 +20,48 @@ function Galery(props: GaleryProps) {
 	const apartInfo = [
 		{
 			img: img1,
-			name: 'Deluxe Apart 1',
+			name: '1',
 		},
 		{
 			img: img2,
-			name: 'Deluxe Apart 2',
+			name: '2',
 		},
 		{
 			img: img3,
-			name: 'Deluxe Apart 3',
+			name: '3',
 		},
 		{
 			img: img4,
-			name: 'Deluxe Apart 4',
+			name: '4',
 		},
 		{
 			img: img5,
-			name: 'Deluxe Apart 5',
+			name: '5',
 		},
 		{
 			img: img6,
-			name: 'Deluxe Apart 6',
+			name: '6',
 		},
 		{
 			img: img7,
-			name: 'Deluxe Apart 7',
+			name: '7',
 		},
 		{
 			img: img8,
-			name: 'Deluxe Apart 8',
+			name: '8',
 		},
 		{
 			img: img9,
-			name: 'Deluxe Apart 9',
+			name: '9',
 		},
 	];
 
 	return (
-		<div id="galery" className="lg:mb-[163rem] lg:relative">
-			<div className="lg:z-1 lg:font1 lg:font-[900] lg:text-[160rem] lg:leading-[191rem] lg:text-[#755E422B]/[0.17] lg:mb-[30rem]">
+		<div id="galery" className="mx-[20rem] lg:mx-0 mb-[61rem] lg:mb-[163rem] relative">
+			<div className="z-1 font1 font-[900] text-[80rem] leading-[95rem] lg:text-[160rem] lg:leading-[191rem] text-[#755E422B]/[0.17] lg:mb-[30rem] mb-[25rem]">
 				Галерея
 			</div>
-			<div className="lg:z-0 lg:grid lg:grid-cols-3 lg:grid-rows-3 lg:gap-[20rem]">
+			<div className="z-0 grid grid-cols-3 grid-rows-3 gap-[4rem] lg:gap-[20rem]">
 				{apartInfo.map((e, i) => {
 					return (
 						<div key={i} className="cursor-pointer">

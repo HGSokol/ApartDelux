@@ -33,6 +33,10 @@ html, body{
   -webkit-writing-mode: vertical-rl;
 }
 
+.active-modal{
+  overflow-y: hidden;
+}
+
 @media screen and (min-width: 1024px) {
   :root {
     font-size: calc(1vw / 14.4);

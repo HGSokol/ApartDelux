@@ -5,14 +5,14 @@ interface AchievProps {
 
 function Achievement(props: AchievProps) {
 	return (
-		<div className="lg:w-[163rem] lg:h-[151rem] lg:border-[1rem] lg:border-[#925E10] lg:text-[white] lg:pt-[32rem] lg:pb-[27rem] lg:flex lg:flex-col lg:items-center">
-			<div className="lg:flex lg:flex-row lg:items-center">
-				<div className="lg:font1 lg:font-[700] lg:text-[50rem] lg:leading-[58rem]">
+		<div className="w-[177rem] h-[164rem] lg:w-[163rem] lg:h-[151rem] border-[1rem] border-[#925E10] text-[white] pt-[22rem] pb-[30rem] lg:pt-[32rem] lg:pb-[27rem] flex flex-col items-center">
+			<div className="flex flex-row items-baseline">
+				<div className="font1 font-[700] text-[52rem] leadng-[61rem] lg:text-[50rem] lg:leading-[58rem]">
 					{props.number}
 				</div>
-				<div className="lg:font1 lg:font-[400] lg:text-[50rem] lg:leading-[58rem]">+</div>
+				<div className="font1 font-[400] text-[50rem] lg:leading-[58rem]">+</div>
 			</div>
-			<div className="lg:font2 lg:font-[400] lg:text-[20rem] lg:leading-[24rem] lg:text-[#C4C4C4]">
+			<div className="font2 font-[400] text-[20rem] leading-[24rem] text-[#C4C4C4]">
 				{props.name}
 			</div>
 		</div>
