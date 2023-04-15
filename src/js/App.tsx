@@ -9,20 +9,20 @@ import SliderPopup from '../js/components/SliderPopup';
 function App() {
 	const [activePopup, setActivePopup] = useState(false);
 
-	// const closePopup = (e) => {
-	// 	const target = e.target as HTMLButtonElement;
+	const closeSlider = (e) => {
+		const target = e.target as HTMLButtonElement;
 
-	// 	if (activePopup && !target.matches('#popup')) {
-	// 		setActivePopup(false);
-	// 	}
-	// };
+		if (target.matches('#sliderCl')) {
+			setActivePopup(false);
+		}
+	};
 
-	// useEffect(() => {
-	// 	document.addEventListener('click', closePopup);
-	// 	return () => {
-	// 		document.removeEventListener('click', closePopup);
-	// 	};
-	// }, []);
+	useEffect(() => {
+		document.addEventListener('click', closeSlider);
+		return () => {
+			document.removeEventListener('click', closeSlider);
+		};
+	}, []);
 
 	if (activePopup) {
 		document.body.classList.add('active-modal');
@@ -30,13 +30,14 @@ function App() {
 		document.body.classList.remove('active-modal');
 	}
 
-	// console.log(activePopup);
 	return (
 		<div
 			className={`bg-gradient-to-b from-[#171717] from-0% via-[#171717]/[0.79] via-36% to-[#292929] to-100%`}>
 			{activePopup ? (
-				<div className="h-[100%] bg-slate-200">
-					<div className="xxx z-[1000] left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] fixed">
+				<div className=" bg-slate-200">
+					<div
+						id="sliderCl"
+						className="h-[100vh] w-[100vw] grid items-center place-content-center xxx z-[1000] fixed bg-[#000000]/[0.8]">
 						<SliderPopup setActivePopup={setActivePopup} />
 					</div>
 				</div>

@@ -25,8 +25,6 @@ function SliderPopup(props: ApartProps) {
 		if (slideImg !== 1) setSlideImg((prev) => prev - 1);
 	};
 
-	console.log(slideImg);
-
 	return (
 		<div
 			id="popup"
@@ -45,13 +43,49 @@ function SliderPopup(props: ApartProps) {
 				onClick={left}
 				className={`cursor-pointer absolute top-1/2 transform -translate-y-1/2 left-[38rem] text-[40rem]
 				${slideImg === 1 ? ' hidden' : ' visible'}`}>
-				l
+				{window.innerWidth < 1024 ? (
+					<svg
+						width="19"
+						height="60"
+						viewBox="0 0 19 60"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M16 2L4 31.5556L16 58" stroke="white" strokeOpacity="0.3" strokeWidth="6" />
+					</svg>
+				) : (
+					<svg
+						width="26"
+						height="86"
+						viewBox="0 0 26 86"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M22 2L5 45.2778L22 84" stroke="white" strokeOpacity="0.3" strokeWidth="8" />
+					</svg>
+				)}
 			</div>
 			<div
 				onClick={right}
 				className={`cursor-pointer absolute top-1/2 transform -translate-y-1/2 right-[38rem] text-[40rem]
 				${slideImg === arr.length ? ' hidden' : ' visible'}`}>
-				r
+				{window.innerWidth < 1024 ? (
+					<svg
+						width="19"
+						height="60"
+						viewBox="0 0 19 60"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M3 2L15 31.5556L3 58" stroke="white" strokeOpacity="0.3" strokeWidth="6" />
+					</svg>
+				) : (
+					<svg
+						width="26"
+						height="86"
+						viewBox="0 0 26 86"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M4 2L21 45.2778L4 84" stroke="white" strokeOpacity="0.3" strokeWidth="8" />
+					</svg>
+				)}
 			</div>
 			<div
 				className={` pt-[16rem] pl-[21rem] absolute bottom-0 left-0 w-[254rem] h-[110rem] lg:w-[600rem] lg:h-[234rem] lg:pl-[42rem] lg:pt-[33rem] bg-[#A1A1A1CC]/[0.8] text-[10rem] 

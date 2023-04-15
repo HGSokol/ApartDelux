@@ -1,20 +1,36 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { RxCross2 } from 'react-icons/rx';
 import { HiArrowLongRight } from 'react-icons/hi2';
 
 function Header() {
 	const [openMenu, setOpenMenu] = useState(false);
 
+	const closeBurger = (e) => {
+		const target = e.target as HTMLButtonElement;
+		console.log(target);
+
+		if (target.matches('#burgerCl')) {
+			setOpenMenu(false);
+		}
+	};
+
+	useEffect(() => {
+		document.addEventListener('click', closeBurger);
+		return () => {
+			document.removeEventListener('click', closeBurger);
+		};
+	}, []);
+
 	if (openMenu) {
-		document.body.classList.add('active-modal');
+		document.body.classList.add('active-burger');
 	} else {
-		document.body.classList.remove('active-modal');
+		document.body.classList.remove('active-burger');
 	}
 
 	return (
 		<div className="transition duration-[400ms] relative h-[677rem] lg:h-[770rem] lg:flex lg:flex-row lg:relative lg:mb-[299rem] mb-[73rem]">
 			{openMenu ? (
-				<div className="absolute h-[100vh] w-[100vw] bg-[#000000]/[0.5]">
+				<div id="burgerCl" className="absolute h-[100vh] w-[100vw] bg-[#000000]/[0.8]">
 					<div className="transition duration-300 absolute w-[341rem] h-[365rem] bg-[#393939] top-0 left-0 pt-[31rem] px-[41rem] flex flex-col lg:hidden ">
 						<div className="flex flex-row justify-between text-center">
 							<div className="font-font-font1 font-[700] text-[20rem] leading-[30rem] text-white mb-[53rem]">
