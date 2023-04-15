@@ -2,7 +2,7 @@ function Footer() {
 	return (
 		<div className="h-[113rem] lg:h-[264rem] bg-[#C4C4C429]/[0.16] pt-[26rem] px-[50rem] lg:pt-[70rem] lg:px-[100rem] text-white flex flex-row justify-between">
 			<div className="flex flex-col text-center lg:text-left">
-				<div className="lg:mb-[81rem] mb-[15rem] font2 font-[600] text-[12rem] leading-[18rem] lg:text-[24rem] lg:leading-[36rem]">
+				<div className="lg:mb-[81rem] mb-[15rem] font-font2 font-[600] text-[12rem] leading-[18rem] lg:text-[24rem] lg:leading-[36rem]">
 					Deluxe Apart
 				</div>
 				<div className="mb-[11rem] lg:hidden flex flex-row gap-[18rem] text-red-400 text-[26rem] justify-center items-center">
@@ -48,15 +48,15 @@ function Footer() {
 						</svg>
 					</div>
 				</div>
-				<div className="font2 font-[400] text-[8rem] leading-[12rem] lg:text-[18rem] lg:leading-[27rem]">
+				<div className="font-font2 font-[400] text-[8rem] leading-[12rem] lg:text-[18rem] lg:leading-[27rem]">
 					Локация: Беларусь, Брест
 				</div>
 			</div>
 			<div className="hidden lg:flex lg:flex-col lg:text-center">
-				<div className="lg:mb-[31rem] lg:font2 lg:font-[600] lg:text-[20rem] lg:leading-[30rem]">
+				<div className="lg:mb-[31rem] lg:font-font2 lg:font-[600] lg:text-[20rem] lg:leading-[30rem]">
 					СОЦИАЛЬНЫЕ СЕТИ
 				</div>
-				<div className="lg:flex lg:flex-row lg:gap-[32rem] lg:text-red-400 lg:text-[26rem] lg:justify-center lg:items-center">
+				{/* <div className="lg:flex lg:flex-row lg:gap-[32rem] lg:text-red-400 lg:text-[26rem] lg:justify-center lg:items-center">
 					<div className="lg:text-[26rem] lg:text-[#A1A1A1] lg:w-[23rem] lg:h-[23rem]">
 						<svg fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -83,16 +83,16 @@ function Footer() {
 							/>
 						</svg>
 					</div>
-				</div>
+				</div> */}
 			</div>
 			<div className="text-center flex flex-col lg:text-right">
-				<div className="lg:mb-[32rem] mb-[15rem] font2 font-[600] text-[12rem] leading-[18rem] lg:text-[20rem] lg:leading-[30rem]">
+				<div className="lg:mb-[32rem] mb-[15rem] font-font2 font-[600] text-[12rem] leading-[18rem] lg:text-[20rem] lg:leading-[30rem]">
 					КОНТАКТ
 				</div>
-				<div className="lg:mb-[22rem] mb-[9rem] text-[8rem] leading-[12rem] font2 font-[400] lg:text-[18rem] lg:leading-[27rem]">
+				<div className="lg:mb-[22rem] mb-[9rem] text-[8rem] leading-[12rem] font-font2 font-[400] lg:text-[18rem] lg:leading-[27rem]">
 					+375(29)221-00-00
 				</div>
-				<div className="font2 text-[8rem] leading-[12rem] font-[400] lg:text-[18rem] lg:leading-[27rem]">
+				<div className="font-font2 text-[8rem] leading-[12rem] font-[400] lg:text-[18rem] lg:leading-[27rem]">
 					kvartirylux.brest@gmail.com
 				</div>
 			</div>

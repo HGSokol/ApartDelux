@@ -17,7 +17,7 @@ function Header() {
 				<div className="absolute h-[100vh] w-[100vw] bg-[#000000]/[0.5]">
 					<div className="transition duration-300 absolute w-[341rem] h-[365rem] bg-[#393939] top-0 left-0 pt-[31rem] px-[41rem] flex flex-col lg:hidden ">
 						<div className="flex flex-row justify-between text-center">
-							<div className="font1 font-[700] text-[20rem] leading-[30rem] text-white mb-[53rem]">
+							<div className="font-font-font1 font-[700] text-[20rem] leading-[30rem] text-white mb-[53rem]">
 								Deluxe Apart
 							</div>
 							<div onClick={() => setOpenMenu(false)} className="pt-[8rem] duration-[400ms]">
@@ -34,19 +34,19 @@ function Header() {
 							<a
 								onClick={() => setOpenMenu(false)}
 								href="#galery"
-								className="mb-[10rem] font2 font-[900] text-[22rem] leading-[31rem] text-[#A1A1A1CC]/[0.8]">
+								className="mb-[10rem] font-font-font2 font-[900] text-[22rem] leading-[31rem] text-[#A1A1A1CC]/[0.8]">
 								Галерея
 							</a>
 							<a
 								onClick={() => setOpenMenu(false)}
 								href="#about"
-								className="mb-[10rem] font2 font-[500] text-[22rem] leading-[31rem] text-white">
+								className="mb-[10rem] font-font2 font-[500] text-[22rem] leading-[31rem] text-white">
 								О нас
 							</a>
 							<a
 								onClick={() => setOpenMenu(false)}
 								href="#contact"
-								className="pb-[25rem] font2 font-[900] text-[22rem] leading-[31rem] text-white">
+								className="pb-[25rem] font-font2 font-[900] text-[22rem] leading-[31rem] text-white">
 								Контакты
 							</a>
 						</div>
@@ -97,7 +97,7 @@ function Header() {
 				</div>
 			) : null}
 			<div className="hidden lg:z-40 lg:w-[85rem] lg:h-[772rem] lg:flex lg:flex-col lg:justify-between lg:pt-[60rem]">
-				<div className="lg:relative mode lg:-rotate-180 lg:font1 lg:font-[700] lg:text-[26rem] lg:text-[#FFFFFF] lg:whitespace-nowrap">
+				<div className="lg:relative mode lg:-rotate-180 lg:font-font1 lg:font-[700] lg:text-[26rem] lg:text-[#FFFFFF] lg:whitespace-nowrap">
 					<div className="lg:absolute lg:-translate-y-[160rem] lg:translate-x-[14rem]">
 						Deluxe Apart
 					</div>
@@ -147,7 +147,7 @@ function Header() {
 				</div>
 			</div>
 			<div className='bg-[url("../img/Header2.png")] bg-contain bg-no-repeat h-[677rem] w-full  lg:z-0 lg:w-[949rem] lg:h-[772rem] lg:bg-[url("../img/Header1.png")] lg:bg-cover lg:bg-no-repeat lg:bg-center lg:pt-[55rem] lg:pl-[15rem] lg:flex lg:flex-row'>
-				<div className="hidden lg:flex lg:flex-row lg:gap-[70rem] lg:font2 lg:font-[400] lg:text-[16rem] lg:text-white lg:whitespace-nowrap">
+				<div className="hidden lg:flex lg:flex-row lg:gap-[70rem] lg:font-font2 lg:font-[400] lg:text-[16rem] lg:text-white lg:whitespace-nowrap">
 					<div className="lg:h-[35rem] lg:border-b-[2rem] lg:border-[#925E10] ">
 						<a href="#galery">Галерея</a>
 					</div>
@@ -173,7 +173,7 @@ function Header() {
 							</svg>
 						</div>
 						<div>
-							<div className="z-20 lg:h-[27rem] flex flex-row items-center gap-[8rem] text-[14rem] lg:gap-[11rem] lg:w-[212rem] lg:text-[18rem] text-[#FFFFFF] font-[400] font1 lg:pt-[53rem]">
+							<div className="z-20 lg:h-[27rem] flex flex-row items-center gap-[8rem] text-[14rem] lg:gap-[11rem] lg:w-[212rem] lg:text-[18rem] text-[#FFFFFF] font-[400] font-font1 lg:pt-[53rem]">
 								<div className="">
 									<svg
 										width="12"
@@ -192,16 +192,16 @@ function Header() {
 						</div>
 					</div>
 					<div className="text-white mb-[59rem] lg:mb-[37rem] pl-[16rem] border-l-[8rem] border-[#925E10] lg:pl-[19rem]">
-						<div className="w-[261rem] font1 font-[700] text-[36rem] leading-[34rem] mb-[8rem] lg:w-full lg:text-[65rem] lg:leading-[58rem] lg:mb-[16rem]">
+						<div className="w-[261rem] font-font1 font-[700] text-[36rem] leading-[34rem] mb-[8rem] lg:w-full lg:text-[60rem] lg:leading-[58rem] lg:mb-[16rem]">
 							Deluxe Apartments
 						</div>
-						<div className="w-[270rem] font2 font-[300] text-[17rem] leading-[23rem] lg:text-[24rem] lg:leading-[33rem] lg:w-[532rem]">
+						<div className="w-[270rem] font-font2 font-[300] text-[17rem] leading-[23rem] lg:text-[24rem] lg:leading-[33rem] lg:w-[532rem]">
 							Апартаменты являются частью элитного квартирного комплекса и находятся в самом центре
 							города Бреста.{' '}
 						</div>
 					</div>
 					<div className="h-[30rem] text-white  flex flex-row gap-[7rem] pl-[24rem] lg:gap-[19rem] lg:text-center lg:pl-[27rem]">
-						<div className="font2 font-[300] text-[12rem] leading-[17rem] lg:text-[20rem] lg:leading-[28rem] lg:text-white">
+						<div className="font-font2 font-[300] text-[12rem] leading-[17rem] lg:text-[20rem] lg:leading-[28rem] lg:text-white">
 							<a href="#galery">Посмотреть</a>
 						</div>
 						<div className="w-[10rem] lg:w-[39rem]">
@@ -248,7 +248,7 @@ function Header() {
 					<div className='lg:w-[225rem] lg:h-[209rem] lg:drop-shadow-[0_0px_22px_rgba(255,255,255,0.1)] lg:bg-contain lg:bg-[url("../img/apart3.png")]'></div>
 				</div>
 			</div>
-			<div className="hidden lg:z-20 lg:h-[27rem] lg:flex lg:flex-row lg:items-center lg:gap-[11rem] lg:w-[212rem] lg:text-[18rem] lg:text-[#FFFFFF] lg:font-[400] lg:font1 lg:pt-[53rem]">
+			<div className="hidden relative lg:z-20 lg:h-[27rem] lg:flex lg:flex-row lg:items-center lg:gap-[11rem] lg:w-[212rem] lg:text-[18rem] lg:text-[#FFFFFF] lg:font-[400] lg:font-font1 lg:pt-[53rem]">
 				<div className="">
 					<svg
 						width="24"
@@ -262,7 +262,9 @@ function Header() {
 						/>
 					</svg>
 				</div>
-				<div>+375(29)221-00-00</div>
+				<div className="absolute left-[31rem] font-font1 font-[400] text-[18rem] leading-[27rem]">
+					+375(29)221-00-00
+				</div>
 			</div>
 		</div>
 	);

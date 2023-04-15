@@ -33,7 +33,7 @@ html, body{
   -webkit-writing-mode: vertical-rl;
 }
 
-.active-modal{
+.active-burger, .active-modal{
   overflow-y: hidden;
 }
 

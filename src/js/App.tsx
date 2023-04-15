@@ -41,7 +41,7 @@ function App() {
 					</div>
 				</div>
 			) : null}
-			<div className="lg:mx-[100rem] z-1">
+			<div className="lg:mx-[100rem] z-1 ">
 				<Header />
 				<Preview />
 				<Galery setActivePopup={setActivePopup} />
