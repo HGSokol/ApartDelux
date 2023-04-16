@@ -13,24 +13,46 @@ interface ApartProps {
 }
 
 function SliderPopup(props: ApartProps) {
-	const [slideImg, setSlideImg] = useState(1);
+	const [currentImg, setCurrentImg] = useState(0);
 	const [slideText, setSlideText] = useState(1);
+	const ref = useRef<HTMLDivElement | null>(null);
 
-	const arr = [IMG, IMG1, IMG2, IMG1];
+	const arr = [IMG, IMG1, IMG2, IMG1, IMG, IMG1, IMG2, IMG1];
 
 	const right = () => {
-		if (slideImg !== arr.length) setSlideImg((prev) => prev + 1);
+		if (currentImg <= arr.length - 2) {
+			setCurrentImg((prev) => prev + 1);
+		}
 	};
 	const left = () => {
-		if (slideImg !== 1) setSlideImg((prev) => prev - 1);
+		if (currentImg > 0) {
+			setCurrentImg((prev) => prev - 1);
+		}
 	};
 
 	return (
 		<div
 			id="popup"
-			className={`relative w-[374rem] h-[377rem] lg:text-[20rem] text-white position z-[1000] lg:w-[1030rem] lg:h-[605rem] bg-cover bg-no-repeat`}
-			style={{ backgroundImage: `url(${arr[slideImg - 1]})` }}>
-			<div onClick={() => props.setActivePopup(false)} className="absolute cursor-pointer">
+			className={`relative w-[374rem] h-[377rem] lg:text-[20rem] text-white position z-[1000] lg:w-[1030rem] lg:h-[605rem] bg-cover bg-no-repeat overflow-hidden`}>
+			<div
+				className="flex flex-row absolute h-[100%] overflow-hidden duration-[300ms]"
+				style={{
+					transform: `translateX(-${
+						window.innerWidth < 1024 ? String(374 * currentImg) : String(1030 * currentImg)
+					}rem)`,
+				}}>
+				{arr.map((_, i) => {
+					return (
+						<div
+							ref={ref}
+							key={i}
+							className="w-[374rem] h-[377rem] lg:w-[1030rem] lg:h-[605rem] bg-cover bg-no-repeat"
+							style={{ backgroundImage: `url(${arr[i]})` }}></div>
+					);
+				})}
+			</div>
+
+			{/* <div onClick={() => props.setActivePopup(false)} className="absolute cursor-pointer">
 				<RxCross2
 					style={{
 						width: '20rem',
@@ -38,11 +60,11 @@ function SliderPopup(props: ApartProps) {
 						color: 'white',
 					}}
 				/>
-			</div>
+			</div> */}
 			<div
 				onClick={left}
 				className={`cursor-pointer absolute top-1/2 transform -translate-y-1/2 left-[38rem] text-[40rem]
-				${slideImg === 1 ? ' hidden' : ' visible'}`}>
+				${currentImg === 0 ? ' hidden' : ' visible'}`}>
 				{window.innerWidth < 1024 ? (
 					<svg
 						width="19"
@@ -66,7 +88,7 @@ function SliderPopup(props: ApartProps) {
 			<div
 				onClick={right}
 				className={`cursor-pointer absolute top-1/2 transform -translate-y-1/2 right-[38rem] text-[40rem]
-				${slideImg === arr.length ? ' hidden' : ' visible'}`}>
+				${currentImg === arr.length - 1 ? ' hidden' : ' visible'}`}>
 				{window.innerWidth < 1024 ? (
 					<svg
 						width="19"
@@ -89,9 +111,8 @@ function SliderPopup(props: ApartProps) {
 			</div>
 			<div
 				className={` pt-[16rem] pl-[21rem] absolute bottom-0 left-0 w-[254rem] h-[110rem] lg:w-[600rem] lg:h-[234rem] lg:pl-[42rem] lg:pt-[33rem] bg-[#A1A1A1CC]/[0.8] text-[10rem] 
-				${slideImg > 1 ? ' hidden' : ' visible'}`}>
+				${currentImg >= 1 ? ' hidden' : ' visible'}`}>
 				{slideText === 1 ? (
-					// мобилк
 					<div>
 						<div className="lg:hidden">
 							<div className="font-font1 font-[700] text-[22rem] leading-[21rem] text-[#171717] mb-[7rem]">
@@ -129,7 +150,6 @@ function SliderPopup(props: ApartProps) {
 						</div>
 					</div>
 				) : (
-					// декстоп
 					<div>
 						<div className="hidden lg:block">
 							<div className="font-font1 font-[700] text-[22rem] leading-[21rem] text-[#171717] mb-[14rem]">

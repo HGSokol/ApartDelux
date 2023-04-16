@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				font1: ['Gotham Pro'],
+				font1: ['Gotham Pro', 'sans-serif'],
 				font2: ['Poppins', 'sans-serif'],
 			},
 		},
