@@ -1,11 +1,7 @@
-import { useState, Dispatch, SetStateAction } from 'react';
-
+import { useEffect,useState, Dispatch, SetStateAction } from 'react';
+import { Idata } from '../App'
 interface ApartProps {
-	items: {
-		img: string;
-		name: string;
-		photo: string[];
-	};
+  items:Idata;
 	setActivePopup: Dispatch<SetStateAction<boolean>>;
 }
 

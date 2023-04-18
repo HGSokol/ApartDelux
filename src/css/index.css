@@ -34,6 +34,9 @@ html, body{
 }
 
 .active-burger, .active-modal{
+  touch-action: none;
+  -ms-touch-action: none;
+  position:relative;
   overflow-y: hidden;
 }
 

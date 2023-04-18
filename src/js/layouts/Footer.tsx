@@ -1,6 +1,6 @@
 function Footer() {
 	return (
-		<div className="h-[113rem] lg:h-[264rem] bg-[#C4C4C429]/[0.16] pt-[26rem] px-[50rem] lg:pt-[70rem] lg:px-[100rem] text-white flex flex-row justify-between">
+		<div className="h-[120rem] lg:h-[264rem] bg-[#C4C4C429]/[0.16] py-[26rem] px-[50rem] lg:pt-[70rem] lg:px-[100rem] text-white flex flex-row justify-between">
 			<div className="flex flex-col text-center lg:text-left">
 				<div className="lg:mb-[81rem] mb-[15rem] font-font2 font-[600] text-[12rem] leading-[18rem] lg:text-[24rem] lg:leading-[36rem]">
 					Deluxe Apart
