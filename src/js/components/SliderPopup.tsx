@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef, Dispatch, SetStateAction } from 'react';
 import { RxDotFilled } from 'react-icons/rx';
-import { Idata } from '../App'
+import { Idata } from '../App';
 import IMG from '../../img/Header1.png';
 import IMG1 from '../../img/Header2.png';
 import IMG2 from '../../img/rect1.png';
 
 interface ApartProps {
-  data:Idata[]
+	data: Idata[];
 	setActivePopup: Dispatch<SetStateAction<boolean>>;
-  activeSlider: number;
+	activeSlider: number;
 }
 
 function SliderPopup(props: ApartProps) {
@@ -16,10 +16,9 @@ function SliderPopup(props: ApartProps) {
 	const [slideText, setSlideText] = useState(1);
 	const ref = useRef<HTMLDivElement | null>(null);
 
-  const dataSlider = props.data[props.activeSlider]
+	const dataSlider = props.data[props.activeSlider];
 
-
-  const arr = [IMG, IMG1, IMG2, IMG1, IMG, IMG1, IMG2, IMG1].slice(0,props.activeSlider);
+	const arr = [IMG, IMG1, IMG2, IMG1, IMG, IMG1, IMG2, IMG1].slice(0, props.activeSlider);
 
 	const right = () => {
 		if (currentImg <= arr.length - 2) {
@@ -128,14 +127,25 @@ function SliderPopup(props: ApartProps) {
 									Выезд: до 11:00
 								</div>
 							</div>
-							<div className="mb-[11rem] text-[11rem]">----</div>
+							<div className="flex flex-row mb-[11rem] gap-[8rem]">
+								{dataSlider.description.map((e, i) => {
+									if (e[1] === '') return;
+									return (
+										<div
+											key={i}
+											className={`grid items-center w-[12rem] h-[12rem] font-font1 font-[600] text-[#4A4A4A] text-[12rem] leading-[18rem] whitespace`}>
+											<img src={e[1]} alt="" />
+										</div>
+									);
+								})}
+							</div>
 							<div className="font-font2 font-[700] text-[10rem] leading-[12rem] text-[#925E10]">
 								{dataSlider.adress}
 							</div>
 						</div>
 						<div className="hidden lg:block">
 							<div className="font-font1 font-[700] text-[22rem] leading-[21rem] text-[#171717] mb-[7rem] lg:text-[32rem] lg:leading-[31rem] lg:mb-[12rem] ">
-              {`Deluxe Apart ${dataSlider.name}`}
+								{`Deluxe Apart ${dataSlider.name}`}
 							</div>
 							<div className="font-font2 font-[700] text-[13rem] leading-[17rem] text-[#171717] mb-[9rem]">
 								Апартаменты идеально подойдут для командировок и туристического отдыха. Во дворе
@@ -157,11 +167,15 @@ function SliderPopup(props: ApartProps) {
 							<div className="font-font1 font-[700] text-[22rem] leading-[21rem] text-[#171717] mb-[14rem]">
 								Что мы предлагаем:
 							</div>
-							<div className="grid grid-rows-5 grid-flow-col gap-[8rem]">
+							<div className="grid grid-rows-5 grid-flow-col ">
 								{dataSlider.description.map((e, i) => {
 									return (
-										<div key={i} className="font-font1 font-[600] text-[#292929] text-[12rem] leading-[18rem]">
-											{e[0]}
+										<div
+											key={i}
+											className={`${
+												i > 4 && i < 10 ? ' pl-[40rem]' : ''
+											} grid items-center w-[172rem] h-[25rem] font-font1 font-[600] text-[#4A4A4A] text-[12rem] leading-[18rem] whitespace`}>
+											{`${e[0]}`}
 										</div>
 									);
 								})}
