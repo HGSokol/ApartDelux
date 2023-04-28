@@ -5,8 +5,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-html, body{
+html,
+body {
   font-size: calc(1vw / 4.14);
   margin: 0;
   padding: 0;
@@ -33,10 +33,11 @@ html, body{
   -webkit-writing-mode: vertical-rl;
 }
 
-.active-burger, .active-modal{
+.active-burger,
+.active-modal {
   touch-action: none;
   -ms-touch-action: none;
-  position:relative;
+  position: relative;
   overflow-y: hidden;
 }
 
@@ -44,4 +45,4 @@ html, body{
   :root {
     font-size: calc(1vw / 14.4);
   }
-};
+}

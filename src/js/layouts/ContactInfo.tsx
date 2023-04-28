@@ -1,13 +1,14 @@
 function ContactInfo() {
-	return (
-		<div
-			id="contact"
-			className="mx-[20rem] w-[374rem] h-[313rem] border-[2rem] lg:mx-auto lg:w-[834rem] lg:h-[540rem] lg:border-[3rem] border-[#925E10] flex flex-col items-center justify-center lg:mb-[147rem] mb-[61rem]">
-			<div className="font-font1 font-[700] text-[30rem] leading-[45rem] lg:font-[900] lg:text-[68rem] lg:leading-[102.14rem] text-white lg:mb-[35rem] mb-[41rem]">
-				Свяжитесь с нами
-			</div>
-			<div className="mb-[41rem] lg:mb-[81rem]">
-				{/* <svg
+  return (
+    <div
+      id="contact"
+      className="mx-[20rem] w-[374rem] h-[313rem] border-[2rem] lg:mx-auto lg:w-[834rem] lg:h-[540rem] lg:border-[3rem] border-[#925E10] flex flex-col items-center justify-center lg:mb-[147rem] mb-[61rem]"
+    >
+      <div className="font-font1 font-[700] text-[30rem] leading-[45rem] lg:font-[900] lg:text-[68rem] lg:leading-[102.14rem] text-white lg:mb-[35rem] mb-[41rem]">
+        Свяжитесь с нами
+      </div>
+      <div className="mb-[41rem] lg:mb-[81rem]">
+        {/* <svg
 					width="64"
 					height="2"
 					viewBox="0 0 64 2"
@@ -15,10 +16,10 @@ function ContactInfo() {
 					xmlns="http://www.w3.org/2000/svg">
 					<line y1="1" x2="64" y2="1" stroke="#925E10" strokeWidth="2" />
 				</svg> */}
-			</div>
-			<div className="flex flex-row gap-[7rem] lg:gap-[32rem] items-center lg:mb-[43rem] mb-[17rem]">
-				<div>
-					{/* <svg
+      </div>
+      <div className="flex flex-row gap-[7rem] lg:gap-[32rem] items-center lg:mb-[43rem] mb-[17rem]">
+        <div>
+          {/* <svg
 						width="24"
 						height="24"
 						viewBox="0 0 24 24"
@@ -29,14 +30,14 @@ function ContactInfo() {
 							fill="white"
 						/>
 					</svg> */}
-				</div>
-				<div className="font-font2 font-[500] text-[16rem] leading-[24rem] lg:text-[28rem] lg:leading-[42rem] text-[#C4C4C4]">
-					+375(29)221-00-00 Ксения
-				</div>
-			</div>
-			<div className="flex flex-row gap-[7rem] lg:gap-[27rem] items-center">
-				<div>
-					{/* <svg
+        </div>
+        <div className="font-font2 font-[500] text-[16rem] leading-[24rem] lg:text-[28rem] lg:leading-[42rem] text-[#C4C4C4]">
+          +375(29)221-00-00 Ксения
+        </div>
+      </div>
+      <div className="flex flex-row gap-[7rem] lg:gap-[27rem] items-center">
+        <div>
+          {/* <svg
 						width="30"
 						height="24"
 						viewBox="0 0 30 24"
@@ -47,13 +48,13 @@ function ContactInfo() {
 							fill="white"
 						/>
 					</svg> */}
-				</div>
-				<div className="font-font2 font-[500] text-[16rem] leading-[24rem] lg:text-[28rem] lg:leading-[42rem] text-[#C4C4C4]">
-					kvartirylux.brest@gmail.com
-				</div>
-			</div>
-		</div>
-	);
+        </div>
+        <div className="font-font2 font-[500] text-[16rem] leading-[24rem] lg:text-[28rem] lg:leading-[42rem] text-[#C4C4C4]">
+          kvartirylux.brest@gmail.com
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default ContactInfo;
