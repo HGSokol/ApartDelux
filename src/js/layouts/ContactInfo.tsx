@@ -11,7 +11,7 @@ function ContactInfo() {
 				Связаться с нами
 			</div>
 			<div className="flex flex-col items-center">
-				<div className="mb-[24rem] flex flex-row gap-[18rem]">
+				<div className="mb-[24rem] flex flex-row items-center gap-[18rem]">
 					<div className="">
 						<FiPhone className="w-[15rem] h-[15rem] text-[#D6AF85]" />
 					</div>
@@ -33,13 +33,13 @@ function ContactInfo() {
 			</div>
 			<div className="w-[91rem] h-[1rem] bg-[#575757] mb-[27rem]"></div>
 			<div className="flex flex-row gap-[24rem] lg:gap-[38rem]">
-				<div className="">
+				<div className="cursor-pointer">
 					<CgInstagram className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3]" />
 				</div>
-				<div className="">
+				<div className="cursor-pointer">
 					<TbBrandTelegram className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3]" />
 				</div>
-				<div className="">
+				<div className="cursor-pointer">
 					<RiFacebookBoxLine className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3]" />
 				</div>
 			</div>

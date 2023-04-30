@@ -260,7 +260,7 @@ function App() {
 	}
 
 	return (
-		<div className={`bg-[#1E1E1E] overflow-hidden`}>
+		<div className={`bg-[#1E1E1E]`}>
 			{activePopup ? (
 				<div className=" bg-slate-200 ">
 					<div
