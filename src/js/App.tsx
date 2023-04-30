@@ -40,12 +40,13 @@ export interface Idata {
 
 function App() {
 	const [activePopup, setActivePopup] = useState(false);
+	const [openSlider, setOpenSlider] = useState(false);
 	const [activeSlider, setActiveSlider] = useState(0);
 
-	const data: Idata[] = [
+	const Apartaments: Idata[] = [
 		{
 			img: img1,
-			name: '1',
+			name: 'Deluxe Apart 1',
 			description: [
 				['1 диван-кровать', Bed1],
 				['1 двуспальная кровать', Bed],
@@ -67,7 +68,7 @@ function App() {
 		},
 		{
 			img: img2,
-			name: '2',
+			name: 'Deluxe Apart 2',
 			description: [
 				['1 диван-кровать', Bed1],
 				['1 двуспальная кровать', Bed],
@@ -89,7 +90,7 @@ function App() {
 		},
 		{
 			img: img3,
-			name: '3',
+			name: 'Deluxe Apart 3',
 			description: [
 				['1 двуспальная кровать', Bed],
 				['Бесплатный wi-fi', WiFi],
@@ -110,7 +111,7 @@ function App() {
 		},
 		{
 			img: img4,
-			name: '4',
+			name: 'Deluxe Apart 4',
 			description: [
 				['1 двуспальная кровать', Bed],
 				['Бесплатный wi-fi', WiFi],
@@ -131,7 +132,7 @@ function App() {
 		},
 		{
 			img: img5,
-			name: '5',
+			name: 'Deluxe Apart 5',
 			description: [
 				['1 диван-кровать', Bed1],
 				['1 двуспальная кровать', Bed],
@@ -153,7 +154,7 @@ function App() {
 		},
 		{
 			img: img6,
-			name: '6',
+			name: 'Deluxe Apart 6',
 			description: [
 				['1 диван-кровать', Bed1],
 				['1 двуспальная кровать', Bed],
@@ -174,7 +175,7 @@ function App() {
 		},
 		{
 			img: img7,
-			name: '7',
+			name: 'Deluxe Apart 7',
 			description: [
 				['1 диван-кровать', Bed1],
 				['1 двуспальная кровать', Bed],
@@ -195,7 +196,7 @@ function App() {
 		},
 		{
 			img: img8,
-			name: '8',
+			name: 'Deluxe Apart 8',
 			description: [
 				['1 диван-кровать', Bed1],
 				['1 двуспальная кровать', Bed],
@@ -217,7 +218,7 @@ function App() {
 		},
 		{
 			img: img9,
-			name: '9',
+			name: 'Deluxe Apart 9',
 			description: [
 				['1 диван-кровать', Bed1],
 				['Бесплатный wi-fi', WiFi],
@@ -242,6 +243,7 @@ function App() {
 		const target = e.target as HTMLButtonElement;
 
 		if (target.matches('#sliderCl')) {
+			setOpenSlider(false);
 			setActivePopup(false);
 		}
 	};
@@ -260,20 +262,30 @@ function App() {
 	}
 
 	return (
-		<div className={`bg-[#1E1E1E]`}>
+		<div className={`bg-[#1E1E1E] `}>
 			{activePopup ? (
 				<div className=" bg-slate-200 ">
 					<div
 						id="sliderCl"
 						className="h-[100vh] w-[100vw] grid items-center place-content-center xxx z-[1000] fixed bg-[#000000]/[0.8] backdrop-blur-[4px]">
-						<SliderPopup data={data} setActivePopup={setActivePopup} activeSlider={activeSlider} />
+						<SliderPopup
+							Apartaments={Apartaments}
+							setActivePopup={setActivePopup}
+							setOpenSlider={setOpenSlider}
+							openSlider={openSlider}
+							activeSlider={activeSlider}
+						/>
 					</div>
 				</div>
 			) : null}
-			<div className=" z-1 ">
+			<div className=" z-1  relative">
 				<Header />
 				<Preview />
-				<Galery />
+				<Galery
+					Apartaments={Apartaments}
+					setActivePopup={setActivePopup}
+					setActiveSlider={setActiveSlider}
+				/>
 				<ContactInfo />
 			</div>
 			<Footer />

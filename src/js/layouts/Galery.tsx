@@ -1,42 +1,14 @@
-import { useState } from 'react';
+import { useState, Dispatch, SetStateAction } from 'react';
+import { Idata } from '../App';
 
-function Galery() {
+interface ApartProps {
+	Apartaments: Idata[];
+	setActivePopup: Dispatch<SetStateAction<boolean>>;
+	setActiveSlider: Dispatch<SetStateAction<number>>;
+}
+
+function Galery(props: ApartProps) {
 	const [currentSliderList, setCurrentSliderList] = useState<number>(0);
-	const m = [
-		{
-			img: '1',
-		},
-		{
-			img: '2',
-		},
-		{
-			img: '3',
-		},
-		{
-			img: '4',
-		},
-		{
-			img: '5',
-		},
-		{
-			img: '6',
-		},
-		{
-			img: '6',
-		},
-		{
-			img: '6',
-		},
-		{
-			img: '6',
-		},
-		{
-			img: '6',
-		},
-		{
-			img: '6',
-		},
-	];
 
 	const left = () => {
 		if (currentSliderList >= 1) {
@@ -44,16 +16,14 @@ function Galery() {
 		}
 	};
 	const right = () => {
-		if (currentSliderList <= m.length - 5) {
+		if (currentSliderList <= props.Apartaments.length - 5) {
 			setCurrentSliderList((prev) => prev + 1);
 		}
 	};
 
-	console.log(currentSliderList);
-
 	return (
-		<div id="galery" className="mb-[120rem] lg:mb-[200rem]">
-			<div className="ml-[16rem] lg:ml-[202rem] font-font1 font-[700] text-[32rem] lg:text-[48rem] leading-[31rem] lg:leading-[46rem] text-[#FAFAFA] mb-[48rem] lg:mb-[64rem]">
+		<div id="galery" className="relative mb-[120rem] lg:mb-[200rem]">
+			<div className="ml-[16rem] lg:ml-[202rem] font-font1 font-[700] text-[32rem] lg:text-[48rem] leading-[31rem] lg:leading-[46rem] text-[#FAFAFA] mb-[48rem] lg:mb-[13rem]">
 				Галерея
 			</div>
 			<div className="hidden lg:flex right-0 w-full justify-end pr-[101rem] mb-[37rem] gap-[28rem]">
@@ -86,12 +56,19 @@ function Galery() {
 					style={{
 						transform: `translateX(-${currentSliderList * 360}rem)`,
 					}}>
-					{m.map((apart, index) => {
+					{props.Apartaments.map((apartament, index) => {
 						return (
 							<div
 								key={index}
-								className="snap-center w-[255rem] h-[400rem] lg:w-[360rem] lg:h-[635rem] bg-white border-[2rem] border-black text-white text-[17rem]">
-								{apart.img}
+								onClick={() => {
+									props.setActivePopup(true);
+									props.setActiveSlider(index);
+								}}
+								className="bg-[-110rem] lg:bg-[-230rem] font-font2 bg-cover bg-no-repeat font-[400] text-[16rem] leading-[20rem] snap-center pt-[19rem] pl-[21rem] lg:pt-[30rem] text-[#FAFAFA] lg:pl-[30rem] w-[255rem] h-[400rem] lg:w-[360rem] lg:h-[635rem] "
+								style={{ backgroundImage: `url(${apartament.img})` }}>
+								<div className="w-[92rem] h-[35rem] lg:w-[75rem] lg:h-[40rem]">
+									{apartament.name}
+								</div>
 							</div>
 						);
 					})}
