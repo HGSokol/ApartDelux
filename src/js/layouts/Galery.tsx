@@ -1,31 +1,19 @@
 import { Dispatch, SetStateAction } from 'react';
 import SliderPopup from '../components/SliderPopup';
 import Apart from '../components/Apart';
-import { Idata } from '../App'
+import { Idata } from '../App';
 
-
-interface GaleryProps {
-	setActivePopup: Dispatch<SetStateAction<boolean>>;
-  setActiveSlider: Dispatch<SetStateAction<number>>;
-  data: Idata[]
-}
-
-function Galery(props: GaleryProps) {
-
+function Galery() {
 	return (
-		<div id="galery" className="mx-[20rem] lg:mx-0 mb-[61rem] lg:mb-[163rem] ">
-			<div className="z-1 font-font1 font-[900] text-[80rem] leading-[95rem] lg:text-[160rem] lg:leading-[191rem] text-[#755E422B]/[0.17] lg:mb-[30rem] mb-[25rem]">
+		<div id="galery" className="mb-[120rem] lg:mb-[200rem]">
+			<div className="ml-[16rem] lg:ml-[202rem] font-font1 font-[700] text-[32rem] lg:text-[48rem] leading-[31rem] lg:leading-[46rem] text-[#FAFAFA] mb-[48rem] lg:mb-[64rem]">
 				Галерея
 			</div>
-			<div className="z-0 grid grid-cols-3 grid-rows-3 gap-[4rem] lg:gap-[20rem]">
-				{props.data.map((e, i) => {
-					return (
-						<div onClick={() =>props.setActiveSlider(i)}  key={i} className="cursor-pointer">
-							<Apart setActivePopup={props.setActivePopup} items={e}/>
-						</div>
-					);
-				})}
+			<div className="s">
+				<div className="a">lrft</div>
+				<div className="a">rght</div>
 			</div>
+			<div className="s">galery</div>
 		</div>
 	);
 }
