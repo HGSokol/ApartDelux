@@ -6,6 +6,7 @@ import { FiPhone } from 'react-icons/fi';
 import { CgInstagram } from 'react-icons/cg';
 import { TbBrandTelegram } from 'react-icons/tb';
 import { RiFacebookBoxLine } from 'react-icons/ri';
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 
 function Header() {
 	// const [openMenu, setOpenMenu] = useState(false);
@@ -51,13 +52,13 @@ function Header() {
 					<div className="hidden lg:flex bg-[#D6AF85] w-[91rem] h-[1rem] -rotate-90 whitespace-nowrap lg:mb-[470rem]"></div>
 					<div className="flex flex-col gap-[24rem] lg:gap-[38rem]">
 						<div className="cursor-pointer">
-							<CgInstagram className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3]" />
+							<CgInstagram className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3] hover:text-[#D6AF85]" />
 						</div>
 						<div className="cursor-pointer">
-							<TbBrandTelegram className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3]" />
+							<TbBrandTelegram className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3] hover:text-[#D6AF85]" />
 						</div>
 						<div className="cursor-pointer">
-							<RiFacebookBoxLine className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3]" />
+							<RiFacebookBoxLine className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3] hover:text-[#D6AF85]" />
 						</div>
 					</div>
 				</div>
@@ -67,10 +68,16 @@ function Header() {
 						<div className="lg:w-[225rem] lg:h-[209rem] bg-black"></div>
 						<div className="lg:w-[225rem] lg:h-[209rem] bg-black"></div>
 					</div>
-					<div className="hidden lg:flex lg:flex-row lg:gap-[48rem] lg:font-font2 lg:font-[700rem] lg:text-[16rem] lg:leading-[22rem] text-[#C8C3C3] lg:mb-[145rem]">
-						<div className="d cursor-pointer">О нас</div>
-						<div className="d cursor-pointer">Галерея</div>
-						<div className="d cursor-pointer">Контакты</div>
+					<div className="hidden lg:flex lg:flex-row lg:gap-[48rem] lg:font-font2 lg:font-[700rem] lg:text-[16rem] lg:leading-[22rem] lg:mb-[145rem]">
+						<a href={'#about'} className="cursor-pointer text-[#C8C3C3] hover:text-[#D6AF85]">
+							О нас
+						</a>
+						<a href={'#galery'} className="cursor-pointer text-[#C8C3C3] hover:text-[#D6AF85]">
+							Галерея
+						</a>
+						<a href={'#contacts'} className="cursor-pointer text-[#C8C3C3] hover:text-[#D6AF85]">
+							Контакты
+						</a>
 					</div>
 					<div className="">
 						<div className="font-font1 font-[700rem] text-[48rem] lg:text-[128rem] leading-[46rem] lg:leading-[123rem] lg:tracking-[2.1rem] text-[#FAFAFA] mb-[24rem] lg:mb-[49rem]">
@@ -80,8 +87,15 @@ function Header() {
 							Апартаменты являются частью элитного квартирного комплекса и находятся в самом центре
 							города Бреста.
 						</div>
-						<div className="cursor-pointer w-full lg:w-[200rem] h-[56rem] bg-[#D6AF85] flex justify-center items-center font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
-							Связаться с нами
+						<div className="group cursor-pointer duration-[500ms] hover:bg-[#B99772] lg:pl-[36rem] lg:hover:w-[232rem] w-full lg:w-[200rem] h-[56rem] bg-[#D6AF85] flex flex-row justify-center lg:justify-normal  items-center ">
+							<div className="lg:mr-[18rem] font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
+								Связаться с нами
+							</div>
+							{window.innerWidth >= 1024 ? (
+								<div className="duration-[500ms] opacity-0 lg:group-hover:opacity-100 font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
+									<HiOutlineArrowNarrowRight className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem]" />
+								</div>
+							) : null}
 						</div>
 					</div>
 				</div>

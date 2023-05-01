@@ -6,6 +6,7 @@ import { Idata } from '../App';
 import IMG from '../../img/Header1.png';
 import IMG1 from '../../img/Header2.png';
 import IMG2 from '../../img/rect1.png';
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 
 interface ApartProps {
 	Apartaments: Idata[];
@@ -37,12 +38,6 @@ function SliderPopup(props: ApartProps) {
 	};
 
 	const isOddLength = props.Apartaments[props.activeSlider].description.length % 2 === 0;
-	const oddCount =
-		props.Apartaments[props.activeSlider].description.length % 2 === 0
-			? props.Apartaments[props.activeSlider].description.length / 2
-			: (props.Apartaments[props.activeSlider].description.length - 1) / 2 + 1;
-
-	console.log(isOddLength, oddCount);
 
 	return (
 		<div
@@ -73,12 +68,16 @@ function SliderPopup(props: ApartProps) {
 							Что мы предлагаем:
 						</div>
 						<div
-							className={`h-[118rem] lg:h-[140rem] flex  flex-col flex-wrap gap-[5rem] lg:gap-[6rem] mb-[18.5rem] 
-						${isOddLength ? ` h-[108rem] lg:mb-[53rem]` : ` h-[118rem] lg:mb-[33rem]`}`}>
+							className={`flex  flex-col flex-wrap gap-[5rem] lg:gap-[6rem] mb-[18.5rem] 
+						${
+							isOddLength
+								? ` h-[108rem] lg:h-[140rem] lg:mb-[53rem]`
+								: ` h-[118rem] lg:h-[150rem] lg:mb-[33rem]`
+						}`}>
 							{props.Apartaments[props.activeSlider].description.map((description, index) => {
 								return (
 									<div key={index} className="flex flex-row gap-[12rem] items-top ">
-										<div className="pt-[5rem]">
+										<div className="pt-[5rem] lg:pt-[10rem]">
 											<svg
 												width="12"
 												height="2"
@@ -119,8 +118,15 @@ function SliderPopup(props: ApartProps) {
 						<div className="w-full flex justify-center">
 							<div
 								onClick={() => props.setOpenSlider(true)}
-								className="cursor-pointer w-[149rem] lg:w-[181rem] h-[45rem] lg:h-[56rem] bg-[#D6AF85] flex justify-center items-center font-font2 font-[600] text-[12rem] lg:text-[14rem] leading-[17rem] lg:leading-[19rem] text-[#FAFAFA]">
-								Смотреть фото
+								className="group cursor-pointer duration-[500ms] hover:bg-[#B99772] lg:pl-[36rem] lg:hover:w-[210rem] w-[149rem] lg:w-[181rem] h-[45rem] lg:h-[56rem] bg-[#D6AF85] flex justify-center lg:justify-normal items-center font-font2 font-[600] text-[12rem] lg:text-[14rem] leading-[17rem] lg:leading-[19rem] text-[#FAFAFA]">
+								<div className="lg:mr-[14rem] font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
+									Смотреть фото
+								</div>
+								{window.innerWidth > 1023 ? (
+									<div className="duration-[500ms] opacity-0 lg:group-hover:opacity-100 font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
+										<HiOutlineArrowNarrowRight className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem]" />
+									</div>
+								) : null}
 							</div>
 						</div>
 					</div>
@@ -131,7 +137,7 @@ function SliderPopup(props: ApartProps) {
 						className="flex flex-row absolute overflow-hidden duration-[300ms]"
 						style={{
 							transform: `translateX(-${
-								window.innerWidth < 1024 ? String(343 * currentImg) : String(1030 * currentImg)
+								window.innerWidth < 1024 ? String(343 * currentImg) : String(1120 * currentImg)
 							}rem)`,
 						}}>
 						{arr.map((_, i) => {
@@ -139,7 +145,7 @@ function SliderPopup(props: ApartProps) {
 								<div
 									ref={ref}
 									key={i}
-									className="w-[343rem] h-[202rem] lg:w-[1030rem] lg:h-[605rem] bg-cover bg-no-repeat"
+									className="w-[343rem] h-[202rem] lg:w-[1120rem] lg:h-[661rem] bg-cover bg-no-repeat"
 									style={{
 										backgroundImage: `url(${props.Apartaments[props.activeSlider].img})`,
 									}}></div>
@@ -148,7 +154,7 @@ function SliderPopup(props: ApartProps) {
 					</div>
 					<div
 						onClick={left}
-						className={`cursor-pointer absolute top-1/2 transform -translate-y-1/2 left-[38rem] text-[40rem]
+						className={`cursor-pointer absolute top-1/2 transform -translate-y-1/2 left-[22rem] lg:left-[38rem] text-[40rem]
 				${currentImg === 0 ? ' hidden' : ' visible'}`}>
 						{window.innerWidth < 1024 ? (
 							<svg
@@ -182,7 +188,7 @@ function SliderPopup(props: ApartProps) {
 					</div>
 					<div
 						onClick={right}
-						className={`cursor-pointer absolute top-1/2 transform -translate-y-1/2 right-[38rem] text-[40rem]
+						className={`cursor-pointer absolute top-1/2 transform -translate-y-1/2 right-[22rem] lg:right-[38rem] text-[40rem]
 				${currentImg === arr.length - 1 ? ' hidden' : ' visible'}`}>
 						{window.innerWidth < 1024 ? (
 							<svg

@@ -27,9 +27,9 @@ function Galery(props: ApartProps) {
 				Галерея
 			</div>
 			<div className="hidden lg:flex right-0 w-full justify-end pr-[101rem] mb-[37rem] gap-[28rem]">
-				<div onClick={() => left()} className="a text-white text-[20rem] cursor-pointer">
+				<div onClick={() => left()} className="text-white text-[20rem] cursor-pointer">
 					<svg
-						className="stroke-[#575757] hover:stroke-[#B99772]"
+						className="stroke-[#575757] hover:stroke-[#B99772] duration-[300ms]"
 						width="92"
 						height="16"
 						viewBox="0 0 92 16"
@@ -38,9 +38,9 @@ function Galery(props: ApartProps) {
 						<path d="M92 8L0.999999 8.00001M0.999999 8.00001L12.5 15.5M0.999999 8.00001L12.5 0.500007" />
 					</svg>
 				</div>
-				<div onClick={() => right()} className="a text-white text-[20rem] cursor-pointer">
+				<div onClick={() => right()} className=" text-white text-[20rem] cursor-pointer">
 					<svg
-						className="stroke-[#D6AF85] hover:stroke-[#B99772]"
+						className="stroke-[#D6AF85] hover:stroke-[#B99772] duration-[300ms]"
 						width="92"
 						height="16"
 						viewBox="0 0 92 16"
@@ -64,9 +64,10 @@ function Galery(props: ApartProps) {
 									props.setActivePopup(true);
 									props.setActiveSlider(index);
 								}}
-								className="bg-[-110rem] lg:bg-[-230rem] font-font2 bg-cover bg-no-repeat font-[400] text-[16rem] leading-[20rem] snap-center pt-[19rem] pl-[21rem] lg:pt-[30rem] text-[#FAFAFA] lg:pl-[30rem] w-[255rem] h-[400rem] lg:w-[360rem] lg:h-[635rem] "
+								className="relative bg-[-110rem] lg:bg-[-230rem] font-font2 bg-cover bg-no-repeat font-[400] text-[16rem] leading-[20rem] snap-center text-[#FAFAFA] w-[255rem] h-[400rem] lg:w-[360rem] lg:h-[635rem] "
 								style={{ backgroundImage: `url(${apartament.img})` }}>
-								<div className="w-[92rem] h-[35rem] lg:w-[75rem] lg:h-[40rem]">
+								<div className="absolute w-[100%] h-[100%] bg-black/[0.4] duration-[500ms] hover:bg-black/[0]"></div>
+								<div className="pt-[19rem] pl-[21rem] lg:pl-[30rem] lg:pt-[30rem] w-[92rem] h-[35rem] lg:w-[100rem] lg:h-[40rem]">
 									{apartament.name}
 								</div>
 							</div>
