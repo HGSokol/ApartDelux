@@ -7,6 +7,7 @@ import { CgInstagram } from 'react-icons/cg';
 import { TbBrandTelegram } from 'react-icons/tb';
 import { RiFacebookBoxLine } from 'react-icons/ri';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import { Apartaments } from '../App';
 
 function Header() {
 	// const [openMenu, setOpenMenu] = useState(false);
@@ -64,9 +65,21 @@ function Header() {
 				</div>
 				<div className="lg:bg-[url('../img/header1_1.png')] lg:pt-[39rem] lg:pl-[85rem] lg:bg-contain lg:w-[890rem] lg:bg-no-repeat lg:order-2 lg:mr-[146rem] lg:relative">
 					<div className="hidden lg:flex lg:flex-row lg:gap-[29rem] lg:absolute lg:translate-x-[615rem] lg:translate-y-[590rem]">
-						<div className="lg:w-[225rem] lg:h-[209rem] bg-black"></div>
-						<div className="lg:w-[225rem] lg:h-[209rem] bg-black"></div>
-						<div className="lg:w-[225rem] lg:h-[209rem] bg-black"></div>
+						<div
+							className="bg-cover bg-no-repeat bg-[-30rem] lg:w-[225rem] lg:h-[209rem]"
+							style={{
+								backgroundImage: `url(${Apartaments[1].img})`,
+							}}></div>
+						<div
+							className="bg-cover bg-no-repeat bg-[-30rem] lg:w-[225rem] lg:h-[209rem]"
+							style={{
+								backgroundImage: `url(${Apartaments[5].img})`,
+							}}></div>
+						<div
+							className="bg-cover bg-no-repeat bg-[-30rem] lg:w-[225rem] lg:h-[209rem]"
+							style={{
+								backgroundImage: `url(${Apartaments[0].img})`,
+							}}></div>
 					</div>
 					<div className="hidden lg:flex lg:flex-row lg:gap-[48rem] lg:font-font2 lg:font-[700rem] lg:text-[16rem] lg:leading-[22rem] lg:mb-[145rem]">
 						<a href={'#about'} className="cursor-pointer text-[#C8C3C3] hover:text-[#D6AF85]">

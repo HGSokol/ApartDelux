@@ -1,8 +1,9 @@
 import { useState, Dispatch, SetStateAction } from 'react';
 import { Idata } from '../App';
+import { Apartaments } from '../App';
 
 interface ApartProps {
-	Apartaments: Idata[];
+	// Apartaments: Idata[];
 	setActivePopup: Dispatch<SetStateAction<boolean>>;
 	setActiveSlider: Dispatch<SetStateAction<number>>;
 }
@@ -16,7 +17,7 @@ function Galery(props: ApartProps) {
 		}
 	};
 	const right = () => {
-		if (currentSliderList <= props.Apartaments.length - 5) {
+		if (currentSliderList <= Apartaments.length - 5) {
 			setCurrentSliderList((prev) => prev + 1);
 		}
 	};
@@ -56,7 +57,7 @@ function Galery(props: ApartProps) {
 					style={{
 						transform: `translateX(-${currentSliderList * 360}rem)`,
 					}}>
-					{props.Apartaments.map((apartament, index) => {
+					{Apartaments.map((apartament, index) => {
 						return (
 							<div
 								key={index}

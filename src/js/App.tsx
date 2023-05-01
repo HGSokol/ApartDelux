@@ -38,206 +38,206 @@ export interface Idata {
 	};
 }
 
+export const Apartaments: Idata[] = [
+	{
+		img: img1,
+		name: 'Deluxe Apart 1',
+		description: [
+			['1 диван-кровать', Bed1],
+			['1 двуспальная кровать', Bed],
+			['Постельное белье', ''],
+			['Стиральная машина', WashingMachine],
+			['Кондиционер', AirConditioner],
+			['Полотенца', Towel],
+			['Фен', Hairdryer],
+			['Парковка', Parking],
+			['Телевизор', TV],
+			['Бесплатный wi-fi', WiFi],
+			['Туалетно-косметические пренадлежности', FireExtinguisher],
+		],
+		adress: 'Адрес ул 17 сентября, 12',
+		photo: {
+			mobile: [],
+			desc: [img3, img2, img1, img4, img5, img6],
+		},
+	},
+	{
+		img: img2,
+		name: 'Deluxe Apart 2',
+		description: [
+			['1 диван-кровать', Bed1],
+			['1 двуспальная кровать', Bed],
+			['Постельное белье', ''],
+			['Стиральная машина', WashingMachine],
+			['Кондиционер', AirConditioner],
+			['Полотенца', Towel],
+			['Фен', Hairdryer],
+			['Парковка', Parking],
+			['Телевизор', TV],
+			['Бесплатный wi-fi', WiFi],
+			['Туалетно-косметические пренадлежности', FireExtinguisher],
+		],
+		adress: 'Адрес ул 17 сентября, 12',
+		photo: {
+			mobile: [],
+			desc: [img3, img2, img1, img4, img5, img6],
+		},
+	},
+	{
+		img: img3,
+		name: 'Deluxe Apart 3',
+		description: [
+			['1 двуспальная кровать', Bed],
+			['Бесплатный wi-fi', WiFi],
+			['Постельное белье', ''],
+			['Стиральная машина', WashingMachine],
+			['Кондиционер', AirConditioner],
+			['Полотенца', Towel],
+			['Фен', Hairdryer],
+			['Парковка', Parking],
+			['Телевизор', TV],
+			['Туалетно-косметические пренадлежности', FireExtinguisher],
+		],
+		adress: 'Адрес ул 17 сентября, 12',
+		photo: {
+			mobile: [],
+			desc: [img3, img2, img1, img4, img5, img6],
+		},
+	},
+	{
+		img: img4,
+		name: 'Deluxe Apart 4',
+		description: [
+			['1 двуспальная кровать', Bed],
+			['Бесплатный wi-fi', WiFi],
+			['Постельное белье', ''],
+			['Стиральная машина', WashingMachine],
+			['Кондиционер', AirConditioner],
+			['Полотенца', Towel],
+			['Фен', Hairdryer],
+			['Парковка', Parking],
+			['Телевизор', TV],
+			['Туалетно-косметические пренадлежности', FireExtinguisher],
+		],
+		adress: 'Адрес ул 17 сентября, 12',
+		photo: {
+			mobile: [],
+			desc: [img3, img2, img1, img4, img5, img6],
+		},
+	},
+	{
+		img: img5,
+		name: 'Deluxe Apart 5',
+		description: [
+			['1 диван-кровать', Bed1],
+			['1 двуспальная кровать', Bed],
+			['Постельное белье', ''],
+			['Стиральная машина', WashingMachine],
+			['Кондиционер', AirConditioner],
+			['Полотенца', Towel],
+			['Фен', Hairdryer],
+			['Парковка', Parking],
+			['Телевизор', TV],
+			['Бесплатный wi-fi', WiFi],
+			['Туалетно-косметические пренадлежности', FireExtinguisher],
+		],
+		adress: 'Адрес ул. Дзержинского, 34',
+		photo: {
+			mobile: [],
+			desc: [img3, img2, img1, img4, img5, img6],
+		},
+	},
+	{
+		img: img6,
+		name: 'Deluxe Apart 6',
+		description: [
+			['1 диван-кровать', Bed1],
+			['1 двуспальная кровать', Bed],
+			['Постельное белье', ''],
+			['Стиральная машина', WashingMachine],
+			['Бесплатный wi-fi', WiFi],
+			['Полотенца', Towel],
+			['Фен', Hairdryer],
+			['Парковка', Parking],
+			['Телевизор', TV],
+			['Туалетно-косметические пренадлежности', FireExtinguisher],
+		],
+		adress: 'Адрес ул 17 сентября, 12',
+		photo: {
+			mobile: [],
+			desc: [img3, img2, img1, img4, img5, img6],
+		},
+	},
+	{
+		img: img7,
+		name: 'Deluxe Apart 7',
+		description: [
+			['1 диван-кровать', Bed1],
+			['1 двуспальная кровать', Bed],
+			['Постельное белье', ''],
+			['Стиральная машина', WashingMachine],
+			['Бесплатный wi-fi', WiFi],
+			['Полотенца', Towel],
+			['Фен', Hairdryer],
+			['Парковка', Parking],
+			['Телевизор', TV],
+			['Туалетно-косметические пренадлежности', FireExtinguisher],
+		],
+		adress: 'Адрес ул 17 сентября, 12',
+		photo: {
+			mobile: [],
+			desc: [img3, img2, img1, img4, img5, img6],
+		},
+	},
+	{
+		img: img8,
+		name: 'Deluxe Apart 8',
+		description: [
+			['1 диван-кровать', Bed1],
+			['1 двуспальная кровать', Bed],
+			['Постельное белье', ''],
+			['Стиральная машина', WashingMachine],
+			['Кондиционер', AirConditioner],
+			['Полотенца', Towel],
+			['Фен', Hairdryer],
+			['Парковка', Parking],
+			['Телевизор', TV],
+			['Бесплатный wi-fi', WiFi],
+			['Туалетно-косметические пренадлежности', FireExtinguisher],
+		],
+		adress: 'Адрес ул 17 сентября, 12',
+		photo: {
+			mobile: [],
+			desc: [img3, img2, img1, img4, img5, img6],
+		},
+	},
+	{
+		img: img9,
+		name: 'Deluxe Apart 9',
+		description: [
+			['1 диван-кровать', Bed1],
+			['Бесплатный wi-fi', WiFi],
+			['Постельное белье', ''],
+			['Стиральная машина', WashingMachine],
+			['Кондиционер', AirConditioner],
+			['Полотенца', Towel],
+			['Фен', Hairdryer],
+			['Парковка', Parking],
+			['Телевизор', TV],
+			['Туалетно-косметические пренадлежности', FireExtinguisher],
+		],
+		adress: 'Адрес ул 17 сентября, 12',
+		photo: {
+			mobile: [],
+			desc: [img3, img2, img1, img4, img5, img6],
+		},
+	},
+];
+
 function App() {
 	const [activePopup, setActivePopup] = useState(false);
 	const [openSlider, setOpenSlider] = useState(false);
 	const [activeSlider, setActiveSlider] = useState(0);
-
-	const Apartaments: Idata[] = [
-		{
-			img: img1,
-			name: 'Deluxe Apart 1',
-			description: [
-				['1 диван-кровать', Bed1],
-				['1 двуспальная кровать', Bed],
-				['Постельное белье', ''],
-				['Стиральная машина', WashingMachine],
-				['Кондиционер', AirConditioner],
-				['Полотенца', Towel],
-				['Фен', Hairdryer],
-				['Парковка', Parking],
-				['Телевизор', TV],
-				['Бесплатный wi-fi', WiFi],
-				['Туалетно-косметические пренадлежности', FireExtinguisher],
-			],
-			adress: 'Адрес ул 17 сентября, 12',
-			photo: {
-				mobile: [],
-				desc: [],
-			},
-		},
-		{
-			img: img2,
-			name: 'Deluxe Apart 2',
-			description: [
-				['1 диван-кровать', Bed1],
-				['1 двуспальная кровать', Bed],
-				['Постельное белье', ''],
-				['Стиральная машина', WashingMachine],
-				['Кондиционер', AirConditioner],
-				['Полотенца', Towel],
-				['Фен', Hairdryer],
-				['Парковка', Parking],
-				['Телевизор', TV],
-				['Бесплатный wi-fi', WiFi],
-				['Туалетно-косметические пренадлежности', FireExtinguisher],
-			],
-			adress: 'Адрес ул 17 сентября, 12',
-			photo: {
-				mobile: [],
-				desc: [],
-			},
-		},
-		{
-			img: img3,
-			name: 'Deluxe Apart 3',
-			description: [
-				['1 двуспальная кровать', Bed],
-				['Бесплатный wi-fi', WiFi],
-				['Постельное белье', ''],
-				['Стиральная машина', WashingMachine],
-				['Кондиционер', AirConditioner],
-				['Полотенца', Towel],
-				['Фен', Hairdryer],
-				['Парковка', Parking],
-				['Телевизор', TV],
-				['Туалетно-косметические пренадлежности', FireExtinguisher],
-			],
-			adress: 'Адрес ул 17 сентября, 12',
-			photo: {
-				mobile: [],
-				desc: [],
-			},
-		},
-		{
-			img: img4,
-			name: 'Deluxe Apart 4',
-			description: [
-				['1 двуспальная кровать', Bed],
-				['Бесплатный wi-fi', WiFi],
-				['Постельное белье', ''],
-				['Стиральная машина', WashingMachine],
-				['Кондиционер', AirConditioner],
-				['Полотенца', Towel],
-				['Фен', Hairdryer],
-				['Парковка', Parking],
-				['Телевизор', TV],
-				['Туалетно-косметические пренадлежности', FireExtinguisher],
-			],
-			adress: 'Адрес ул 17 сентября, 12',
-			photo: {
-				mobile: [],
-				desc: [],
-			},
-		},
-		{
-			img: img5,
-			name: 'Deluxe Apart 5',
-			description: [
-				['1 диван-кровать', Bed1],
-				['1 двуспальная кровать', Bed],
-				['Постельное белье', ''],
-				['Стиральная машина', WashingMachine],
-				['Кондиционер', AirConditioner],
-				['Полотенца', Towel],
-				['Фен', Hairdryer],
-				['Парковка', Parking],
-				['Телевизор', TV],
-				['Бесплатный wi-fi', WiFi],
-				['Туалетно-косметические пренадлежности', FireExtinguisher],
-			],
-			adress: 'Адрес ул. Дзержинского, 34',
-			photo: {
-				mobile: [],
-				desc: [],
-			},
-		},
-		{
-			img: img6,
-			name: 'Deluxe Apart 6',
-			description: [
-				['1 диван-кровать', Bed1],
-				['1 двуспальная кровать', Bed],
-				['Постельное белье', ''],
-				['Стиральная машина', WashingMachine],
-				['Бесплатный wi-fi', WiFi],
-				['Полотенца', Towel],
-				['Фен', Hairdryer],
-				['Парковка', Parking],
-				['Телевизор', TV],
-				['Туалетно-косметические пренадлежности', FireExtinguisher],
-			],
-			adress: 'Адрес ул 17 сентября, 12',
-			photo: {
-				mobile: [],
-				desc: [],
-			},
-		},
-		{
-			img: img7,
-			name: 'Deluxe Apart 7',
-			description: [
-				['1 диван-кровать', Bed1],
-				['1 двуспальная кровать', Bed],
-				['Постельное белье', ''],
-				['Стиральная машина', WashingMachine],
-				['Бесплатный wi-fi', WiFi],
-				['Полотенца', Towel],
-				['Фен', Hairdryer],
-				['Парковка', Parking],
-				['Телевизор', TV],
-				['Туалетно-косметические пренадлежности', FireExtinguisher],
-			],
-			adress: 'Адрес ул 17 сентября, 12',
-			photo: {
-				mobile: [],
-				desc: [],
-			},
-		},
-		{
-			img: img8,
-			name: 'Deluxe Apart 8',
-			description: [
-				['1 диван-кровать', Bed1],
-				['1 двуспальная кровать', Bed],
-				['Постельное белье', ''],
-				['Стиральная машина', WashingMachine],
-				['Кондиционер', AirConditioner],
-				['Полотенца', Towel],
-				['Фен', Hairdryer],
-				['Парковка', Parking],
-				['Телевизор', TV],
-				['Бесплатный wi-fi', WiFi],
-				['Туалетно-косметические пренадлежности', FireExtinguisher],
-			],
-			adress: 'Адрес ул 17 сентября, 12',
-			photo: {
-				mobile: [],
-				desc: [],
-			},
-		},
-		{
-			img: img9,
-			name: 'Deluxe Apart 9',
-			description: [
-				['1 диван-кровать', Bed1],
-				['Бесплатный wi-fi', WiFi],
-				['Постельное белье', ''],
-				['Стиральная машина', WashingMachine],
-				['Кондиционер', AirConditioner],
-				['Полотенца', Towel],
-				['Фен', Hairdryer],
-				['Парковка', Parking],
-				['Телевизор', TV],
-				['Туалетно-косметические пренадлежности', FireExtinguisher],
-			],
-			adress: 'Адрес ул 17 сентября, 12',
-			photo: {
-				mobile: [],
-				desc: [],
-			},
-		},
-	];
 
 	const closeSlider = (e) => {
 		const target = e.target as HTMLButtonElement;
@@ -269,7 +269,7 @@ function App() {
 						id="sliderCl"
 						className="h-[100vh] w-[100vw] grid items-center place-content-center xxx z-[1000] fixed bg-[#000000]/[0.8] backdrop-blur-[4px]">
 						<SliderPopup
-							Apartaments={Apartaments}
+							// Apartaments={Apartaments}
 							setActivePopup={setActivePopup}
 							setOpenSlider={setOpenSlider}
 							openSlider={openSlider}
@@ -282,7 +282,7 @@ function App() {
 				<Header />
 				<Preview />
 				<Galery
-					Apartaments={Apartaments}
+					// Apartaments={Apartaments}
 					setActivePopup={setActivePopup}
 					setActiveSlider={setActiveSlider}
 				/>

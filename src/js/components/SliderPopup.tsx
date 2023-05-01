@@ -3,13 +3,15 @@ import { RxDotFilled } from 'react-icons/rx';
 import { WiTime8 } from 'react-icons/wi';
 import { IoLocationOutline } from 'react-icons/io5';
 import { Idata } from '../App';
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import IMG2 from '../../img/rect1.png';
 import IMG from '../../img/Header1.png';
 import IMG1 from '../../img/Header2.png';
-import IMG2 from '../../img/rect1.png';
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+
+import { Apartaments } from '../App';
 
 interface ApartProps {
-	Apartaments: Idata[];
+	// Apartaments: Idata[];
 	setActivePopup: Dispatch<SetStateAction<boolean>>;
 	setOpenSlider: Dispatch<SetStateAction<boolean>>;
 	openSlider: boolean;
@@ -22,9 +24,9 @@ function SliderPopup(props: ApartProps) {
 
 	const ref = useRef<HTMLDivElement | null>(null);
 
-	const dataSlider = props.Apartaments[props.activeSlider];
+	const dataSlider = Apartaments[props.activeSlider];
 
-	const arr = [IMG, IMG1, IMG2, IMG1, IMG, IMG1, IMG2, IMG1].slice(0, props.activeSlider);
+	const arr = dataSlider.photo.desc.slice(0, dataSlider.photo.desc.length);
 
 	const right = () => {
 		if (currentImg <= arr.length - 2) {
@@ -37,7 +39,7 @@ function SliderPopup(props: ApartProps) {
 		}
 	};
 
-	const isOddLength = props.Apartaments[props.activeSlider].description.length % 2 === 0;
+	const isOddLength = Apartaments[props.activeSlider].description.length % 2 === 0;
 
 	return (
 		<div
@@ -50,13 +52,12 @@ function SliderPopup(props: ApartProps) {
 						<div
 							className=" bg-cover w-[343rem] lg:w-[448rem] bg-[-200rem]"
 							style={{
-								backgroundImage: `url(${props.Apartaments[props.activeSlider].img})`,
+								backgroundImage: `url(${Apartaments[props.activeSlider].img})`,
 							}}></div>
 					) : null}
-
 					<div className="py-[24rem] px-[16rem] lg:p-[48rem] w-[343rem] lg:w-[672rem]">
 						<div className="font-font1 font-[400] text-[24rem] lg:text-[32rem] leading-[23rem] lg:leading-[31rem] text-[#1E1E1E] mb-[16rem] lg:mb-[32rem]">
-							{props.Apartaments[props.activeSlider].name}
+							{Apartaments[props.activeSlider].name}
 						</div>
 						<div className="font-font2 font-[400] text-[14rem] lg:text-[14rem] leading-[17rem] lg:leading-[20rem] text-[#575757] mb-[12rem] lg:mb-[18rem]">
 							Апартаменты идеально подойдут для командировок и туристического отдыха. Во дворе есть
@@ -74,7 +75,7 @@ function SliderPopup(props: ApartProps) {
 								? ` h-[108rem] lg:h-[140rem] lg:mb-[53rem]`
 								: ` h-[118rem] lg:h-[150rem] lg:mb-[33rem]`
 						}`}>
-							{props.Apartaments[props.activeSlider].description.map((description, index) => {
+							{Apartaments[props.activeSlider].description.map((description, index) => {
 								return (
 									<div key={index} className="flex flex-row gap-[12rem] items-top ">
 										<div className="pt-[5rem] lg:pt-[10rem]">
@@ -147,7 +148,7 @@ function SliderPopup(props: ApartProps) {
 									key={i}
 									className="w-[343rem] h-[202rem] lg:w-[1120rem] lg:h-[661rem] bg-cover bg-no-repeat"
 									style={{
-										backgroundImage: `url(${props.Apartaments[props.activeSlider].img})`,
+										backgroundImage: `url(${Apartaments[props.activeSlider].photo.desc[i]})`,
 									}}></div>
 							);
 						})}
