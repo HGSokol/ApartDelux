@@ -47,37 +47,38 @@ function SliderPopup(props: ApartProps) {
 	return (
 		<div
 			id="popup"
-			className={`relative w-[374rem] h-[377rem] lg:text-[20rem] text-white position z-[1000] lg:w-[1120rem] lg:h-[661rem] bg-cover bg-no-repeat overflow-hidden`}>
+			className={`relative  lg:text-[20rem] text-white position z-[1000] lg:w-[1120rem] lg:h-[661rem] bg-cover bg-no-repeat overflow-hidden
+			${props.openSlider ? ' w-[343rem] h-[202rem]' : ' w-[343rem] h-[533rem]'}`}>
 			{!props.openSlider ? (
 				<div className="h-[100%] bg-white w-[100%] flex flex-row">
-					<div
-						className=" bg-cover w-[448rem] bg-[-200rem]"
-						style={{ backgroundImage: `url(${props.Apartaments[props.activeSlider].img})` }}></div>
-					<div className="lg:p-[48rem] w-[672rem]">
-						<div className="font-font1 font-[400] lg:text-[32rem] lg:leading-[31rem] text-[#1E1E1E] lg:mb-[32rem]">
+					{window.innerWidth > 1023 ? (
+						<div
+							className=" bg-cover w-[343rem] lg:w-[448rem] bg-[-200rem]"
+							style={{
+								backgroundImage: `url(${props.Apartaments[props.activeSlider].img})`,
+							}}></div>
+					) : null}
+
+					<div className="py-[24rem] px-[16rem] lg:p-[48rem] w-[343rem] lg:w-[672rem]">
+						<div className="font-font1 font-[400] text-[24rem] lg:text-[32rem] leading-[23rem] lg:leading-[31rem] text-[#1E1E1E] mb-[16rem] lg:mb-[32rem]">
 							{props.Apartaments[props.activeSlider].name}
 						</div>
-						<div className="font-font2 font-[400] text-[14rem] leading-[20rem] text-[#575757] mb-[18rem]">
+						<div className="font-font2 font-[400] text-[14rem] lg:text-[14rem] leading-[17rem] lg:leading-[20rem] text-[#575757] mb-[12rem] lg:mb-[18rem]">
 							Апартаменты идеально подойдут для командировок и туристического отдыха. Во дворе есть
 							детская площадка и бесплатная охраняемая парковка. Весь двор оборудован
 							видеонаблюдением. В здании дома находится фитнес-центр, салон красоты, офис такси,
 							охраняемая парковка.{' '}
 						</div>
-						<div className="font-font2 font-[600] text-[14rem] leading-[19rem] text-[#1E1E1E] mb-[18rem]">
+						<div className="font-font2 font-[600] text-[14rem] leading-[19rem] text-[#1E1E1E] mb-[12rem] lg:mb-[18rem]">
 							Что мы предлагаем:
 						</div>
 						<div
-							className={`grid grid-flow-col gap-[6rem]  
-						${isOddLength ? ` grid-rows-[${oddCount}] mb-[53rem]` : ` grid-rows-[${oddCount}] mb-[33rem]`}`}
-							style={{
-								gridTemplateRows: `repeat(${
-									isOddLength ? `${oddCount}` : `${oddCount}`
-								}, minmax(0, 1fr))`,
-							}}>
+							className={`h-[118rem] lg:h-[140rem] flex  flex-col flex-wrap gap-[5rem] lg:gap-[6rem] mb-[18.5rem] 
+						${isOddLength ? ` h-[108rem] lg:mb-[53rem]` : ` h-[118rem] lg:mb-[33rem]`}`}>
 							{props.Apartaments[props.activeSlider].description.map((description, index) => {
 								return (
-									<div key={index} className="flex flex-row gap-[12rem] items-center">
-										<div className="s">
+									<div key={index} className="flex flex-row gap-[12rem] items-top ">
+										<div className="pt-[5rem]">
 											<svg
 												width="12"
 												height="2"
@@ -92,33 +93,33 @@ function SliderPopup(props: ApartProps) {
 												/>
 											</svg>
 										</div>
-										<div className="w-[200rem] h-[20rem] font-font2 font-[400] text-[14rem] leading-[20rem] text-[#575757]">
+										<div className="w-[123rem] lg:w-[200rem] lg:h-[20rem] font-font2 font-[400] text-[12rem] lg:text-[14rem] leading-[12rem] lg:leading-[20rem] text-[#575757]">
 											{description[0]}
 										</div>
 									</div>
 								);
 							})}
 						</div>
-						<div className="flex flex-row gap-[11rem] mb-[14rem]">
+						<div className="flex flex-row items-center gap-[13rem] lg:gap-[11rem] mb-[16rem] lg:mb-[14rem]">
 							<div className="s">
-								<WiTime8 className="w-[30rem] h-[30rem] lg:w-[18rem] lg:h-[18rem] text-[#C8C3C3]" />
+								<WiTime8 className="w-[18rem] h-[18rem] text-[#C8C3C3]" />
 							</div>
-							<div className="font-font2 font-[600] text-[16rem] leading-[22rem] text-[#B99772]">
+							<div className="font-font2 font-[600] text-[14rem] lg:text-[16rem] leading-[20rem] lg:leading-[22rem] text-[#B99772]">
 								Заезд в любое время с 14:00.{' '}
 							</div>
 						</div>
-						<div className="flex flex-row gap-[11rem] mb-[49rem]">
+						<div className="flex flex-row items-center gap-[13rem] lg:gap-[11rem] mb-[26rem] lg:mb-[49rem]">
 							<div className="s">
-								<IoLocationOutline className="w-[30rem] h-[30rem] lg:w-[18rem] lg:h-[18rem] text-[#C8C3C3]" />
+								<IoLocationOutline className="w-[18rem] h-[18rem] text-[#C8C3C3]" />
 							</div>
-							<div className="font-font2 font-[600] text-[16rem] leading-[22rem] text-[#B99772]">
+							<div className="font-font2 font-[600] text-[14rem] lg:text-[16rem] leading-[20rem] lg:leading-[22rem] text-[#B99772]">
 								ул. 17 сентября, 12
 							</div>
 						</div>
 						<div className="w-full flex justify-center">
 							<div
 								onClick={() => props.setOpenSlider(true)}
-								className="cursor-pointer lg:w-[181rem] lg:h-[56rem] bg-[#D6AF85] flex justify-center items-center font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
+								className="cursor-pointer w-[149rem] lg:w-[181rem] h-[45rem] lg:h-[56rem] bg-[#D6AF85] flex justify-center items-center font-font2 font-[600] text-[12rem] lg:text-[14rem] leading-[17rem] lg:leading-[19rem] text-[#FAFAFA]">
 								Смотреть фото
 							</div>
 						</div>
@@ -127,10 +128,10 @@ function SliderPopup(props: ApartProps) {
 			) : (
 				<div className="">
 					<div
-						className="flex flex-row absolute  overflow-hidden duration-[300ms]"
+						className="flex flex-row absolute overflow-hidden duration-[300ms]"
 						style={{
 							transform: `translateX(-${
-								window.innerWidth < 1024 ? String(374 * currentImg) : String(1030 * currentImg)
+								window.innerWidth < 1024 ? String(343 * currentImg) : String(1030 * currentImg)
 							}rem)`,
 						}}>
 						{arr.map((_, i) => {
@@ -138,7 +139,7 @@ function SliderPopup(props: ApartProps) {
 								<div
 									ref={ref}
 									key={i}
-									className="w-[374rem] h-[377rem] lg:w-[1030rem] lg:h-[605rem] bg-cover bg-no-repeat"
+									className="w-[343rem] h-[202rem] lg:w-[1030rem] lg:h-[605rem] bg-cover bg-no-repeat"
 									style={{
 										backgroundImage: `url(${props.Apartaments[props.activeSlider].img})`,
 									}}></div>
