@@ -13,8 +13,17 @@ body {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 0;
+  scrollbar-width: none;
+  display: none;
+}
+
+::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
 }
 
 ::-webkit-credentials-auto-fill-button {
