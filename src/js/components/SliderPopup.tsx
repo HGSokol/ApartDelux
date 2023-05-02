@@ -224,6 +224,37 @@ function SliderPopup(props: ApartProps) {
               </svg>
             )}
           </div>
+          <div className="hidden absolute dutarion-[500ms] lg:flex flex-row gap-[8rem] bottom-[20rem] right-1/2 translate-x-1/2">
+            {Apartaments[props.activeSlider].photos.map((e, i) => {
+              return (
+                <div key={i}>
+                  {currentImg === i ? (
+                    <svg
+                      width="20"
+                      height="8"
+                      viewBox="0 0 20 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="20" height="8" rx="4" fill="#D6AF85" />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="cursor-pointer"
+                      onClick={() => setCurrentImg(i)}
+                      width="8"
+                      height="8"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="8" height="8" rx="4" fill="#C8C3C3" />
+                    </svg>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
     </div>
