@@ -58,11 +58,11 @@ function Preview() {
 							</div>
 						</div>
 					</div>
-					<div className="font-font1 font-[400] text-[24rem] lg:text-[40rem] leading-[23rem] lg:eading-[38rem] text-[#FFFFFF] mb-[32rem] lg:mb-[50rem] lg:order-1">
+					<div className="font-font1 font-[400] text-[24rem] lg:text-[40rem] leading-[23rem] lg:eading-[38rem] text-[#FFFFFF] mb-[32rem] lg:mb-[65rem] lg:order-1">
 						Deluxe Apart{' '}
 					</div>
 				</div>
-				<div className="flex flex-col font-font2 font-[400] leading-[19rem] text-[14rem] lg:text-[16rem] lg:leading-[22rem] text-[#C8C3C3]">
+				<div className="lg:w-[401rem] flex flex-col font-font2 font-[400] leading-[19rem] text-[14rem] lg:text-[16rem] lg:leading-[22rem] text-[#C8C3C3]">
 					<div className="mb-[16rem]">
 						Студия, в которой найдется квартира для Вас на любой вкус. Все апартаменты находятся в
 						самом сердце г. Бреста. Мы предлагаем Вам все удобства, необходимые для проживания как
