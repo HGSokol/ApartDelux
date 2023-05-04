@@ -8,34 +8,11 @@ import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import { Apartaments } from '../App';
 
 function Header() {
-	// const [openMenu, setOpenMenu] = useState(false);
-
-	// const closeBurger = (e) => {
-	//   const target = e.target as HTMLButtonElement;
-
-	//   if (target.matches('#burgerCl')) {
-	//     setOpenMenu(false);
-	//   }
-	// };
-
-	// useEffect(() => {
-	//   document.addEventListener('click', closeBurger);
-	//   return () => {
-	//     document.removeEventListener('click', closeBurger);
-	//   };
-	// }, []);
-
-	// if (openMenu) {
-	//   document.body.classList.add('active-burger');
-	// } else {
-	//   document.body.classList.remove('active-burger');
-	// }
-
 	return (
 		<div className="mb-[80rem] lg:mb-[149rem] overflow-hidden">
 			<div className=" px-[16rem] pt-[24rem] bg-[length:760rem_640rem] bg-[-245rem] bg-no-repeat bg-[url('../img/header1_1.png')] lg:bg-none transition duration-[400ms] h-[640rem] lg:h-[900rem] lg:flex lg:flex-row mb-[36rem] lg:mb-[0rem] flex flex-row justify-between flex-wrap lg:flex-nowrap lg:justify-normal lg:pt-0 lg:pl-[41rem]">
-				<div className=" flex flex-row gap-[11rem] items-center h-[17rem] lg:order-3 lg:pr-[100rem] lg:pt-[38rem]">
-					<div className="">
+				<div className="flex flex-row gap-[11rem] items-center h-[17rem] lg:order-3 lg:pr-[100rem] lg:pt-[38rem]">
+					<div>
 						<FiPhone className="w-[15rem] h-[15rem] text-[#C8C3C3]" />
 					</div>
 					<div className="font-font2 font-[400] text-[14rem] leading-[19rem] text-[#C8C3C3] ">
@@ -45,20 +22,20 @@ function Header() {
 				<div className="w-max flex flex-col lg:items-center lg:pt-[40rem] lg:order-1 lg:mr-[41rem] lg:w-[40rem]">
 					<div className="hidden lg:flex lg:flex-col lg:gap-[27rem] lg:mb-[83rem]">
 						<div className="lg:relative mode lg:-rotate-180 lg:font-font1 lg:font-[300] lg:text-[16rem] lg:text-[#FFFFFF] lg:whitespace-nowrap">
-							<div className="">Deluxe Apart</div>
+							<div>Deluxe Apart</div>
 						</div>
 					</div>
 					<div className="hidden lg:flex bg-[#D6AF85] w-[91rem] h-[1rem] -rotate-90 whitespace-nowrap lg:mb-[470rem]"></div>
 					<div className="flex flex-col gap-[24rem] lg:gap-[38rem]">
-						<div className="cursor-pointer">
+						<a href={'#'} target="_blank" className="cursor-pointer">
 							<CgInstagram className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3] hover:text-[#D6AF85]" />
-						</div>
-						<div className="cursor-pointer">
+						</a>
+						<a href={'#'} target="_blank" className="cursor-pointer">
 							<TbBrandTelegram className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3] hover:text-[#D6AF85]" />
-						</div>
-						<div className="cursor-pointer">
+						</a>
+						<a href={'#'} target="_blank" className="cursor-pointer">
 							<RiFacebookBoxLine className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3] hover:text-[#D6AF85]" />
-						</div>
+						</a>
 					</div>
 				</div>
 				<div className="lg:bg-[url('../img/header1_1.png')] lg:pt-[39rem] lg:pl-[85rem] lg:bg-contain lg:w-[890rem] lg:bg-no-repeat lg:order-2 lg:mr-[146rem] lg:relative">
@@ -116,11 +93,9 @@ function Header() {
 							<div className="lg:mr-[18rem] font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
 								Связаться с нами
 							</div>
-							{window.innerWidth >= 1024 ? (
-								<div className="duration-[500ms] opacity-0 lg:group-hover:opacity-100 font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
-									<HiOutlineArrowNarrowRight className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem]" />
-								</div>
-							) : null}
+							<div className="hidden lg:flex duration-[500ms] opacity-0 lg:group-hover:opacity-100 font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
+								<HiOutlineArrowNarrowRight className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem]" />
+							</div>
 						</a>
 					</div>
 				</div>

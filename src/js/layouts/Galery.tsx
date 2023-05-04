@@ -1,11 +1,8 @@
 import { useState, Dispatch, SetStateAction } from 'react';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
-
-import { Idata } from '../App';
 import { Apartaments } from '../App';
 
 interface ApartProps {
-	// Apartaments: Idata[];
 	setActivePopup: Dispatch<SetStateAction<boolean>>;
 	setActiveSlider: Dispatch<SetStateAction<number>>;
 }
@@ -32,20 +29,16 @@ function Galery(props: ApartProps) {
 			<div className="hidden lg:flex right-0 w-full justify-end pr-[101rem] mb-[37rem] gap-[28rem]">
 				<div onClick={() => left()} className="text-white text-[20rem] cursor-pointer">
 					<svg
-						className="stroke-[#575757] hover:stroke-[#B99772] duration-[300ms]"
-						width="92"
-						height="16"
+						className="w-[92rem] h-[16rem] stroke-[#575757] hover:stroke-[#B99772] duration-[300ms]"
 						viewBox="0 0 92 16"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg">
 						<path d="M92 8L0.999999 8.00001M0.999999 8.00001L12.5 15.5M0.999999 8.00001L12.5 0.500007" />
 					</svg>
 				</div>
-				<div onClick={() => right()} className=" text-white text-[20rem] cursor-pointer">
+				<div onClick={() => right()} className="text-white text-[20rem] cursor-pointer">
 					<svg
-						className="stroke-[#D6AF85] hover:stroke-[#B99772] duration-[300ms]"
-						width="92"
-						height="16"
+						className="w-[92rem] h-[16rem] stroke-[#D6AF85] hover:stroke-[#B99772] duration-[300ms]"
 						viewBox="0 0 92 16"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg">
@@ -55,15 +48,14 @@ function Galery(props: ApartProps) {
 			</div>
 			<div className="overflow-x-scroll lg:overflow-hidden snap-proximity -wekbit-scrollbar:w-[0rem]">
 				<div
-					className={`relative flex flex-row w-max gap-[16rem] lg:gap-0 cursor-pointer duration-[600ms] `}
+					className="relative flex flex-row w-max gap-[16rem] lg:gap-0 cursor-pointer duration-[600ms]"
 					style={{
 						transform: `translateX(-${currentSliderList * 360}rem)`,
 					}}>
 					{Apartaments.map((apartament, index) => {
 						return (
-							<LazyLoadComponent>
+							<LazyLoadComponent key={index}>
 								<div
-									key={index}
 									onClick={() => {
 										props.setActivePopup(true);
 										props.setActiveSlider(index);

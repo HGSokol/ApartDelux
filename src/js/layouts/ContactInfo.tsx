@@ -14,7 +14,7 @@ function ContactInfo() {
 			</div>
 			<div className="flex flex-col items-center">
 				<div className="mb-[24rem] flex flex-row items-center gap-[18rem]">
-					<div className="">
+					<div>
 						<FiPhone className="w-[15rem] h-[15rem] text-[#D6AF85]" />
 					</div>
 					<div className="text-[#D6AF85] font-font2 font-[400] text-[16rem] leading-[22rem]">
@@ -25,7 +25,7 @@ function ContactInfo() {
 					</div>
 				</div>
 				<div className="mb-[28rem] flex flex-row gap-[18rem] items-center">
-					<div className="a">
+					<div>
 						<HiOutlineMail className="w-[15rem] h-[15rem] text-[#D6AF85] " />
 					</div>
 					<div className="text-[#D6AF85] font-font2 font-[400] text-[16rem] leading-[22rem]">
@@ -35,15 +35,15 @@ function ContactInfo() {
 			</div>
 			<div className="w-[91rem] h-[1rem] bg-[#575757] mb-[27rem]"></div>
 			<div className="flex flex-row gap-[24rem] lg:gap-[38rem]">
-				<div className="cursor-pointer">
+				<a href={'#'} target="_blank" className="cursor-pointer">
 					<CgInstagram className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3] hover:text-[#D6AF85]" />
-				</div>
-				<div className="cursor-pointer">
+				</a>
+				<a href={'#'} target="_blank" className="cursor-pointer">
 					<TbBrandTelegram className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3] hover:text-[#D6AF85]" />
-				</div>
-				<div className="cursor-pointer">
+				</a>
+				<a href={'#'} target="_blank" className="cursor-pointer">
 					<RiFacebookBoxLine className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem] text-[#C8C3C3] hover:text-[#D6AF85]" />
-				</div>
+				</a>
 			</div>
 		</div>
 	);

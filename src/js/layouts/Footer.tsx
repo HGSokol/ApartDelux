@@ -9,7 +9,7 @@ function Footer() {
 						Deluxe Apart{' '}
 					</div>
 					<div className="flex flex-row gap-[10rem] lg:gap-[8rem] items-center justify-center">
-						<div className="s">
+						<div>
 							<IoLocationOutline className="w-[30rem] h-[30rem] lg:w-[18rem] lg:h-[18rem] text-[#C8C3C3]" />
 						</div>
 						<div className="font-font2 font-[400] text-[14rem] lg:text-[16rem] lg:leading-[22rem] leading-[19rem] text-[#C8C3C3] ">
@@ -19,7 +19,7 @@ function Footer() {
 				</div>
 				<div className="flex flex-col w-full items-center justify-center lg:items-end font-font2 font-[400] text-[14rem] lg:text-[16rem] lg:leading-[22rem] leading-[19rem] text-[#C8C3C3] mb-[32rem] lg:mb-0 lg:order-3 lg:w-[238rem]">
 					<div className="mb-[8rem] lg:mb-[16rem]">+375(29)221-00-00</div>
-					<div className="s">kvartirylux.brest@gmail.com</div>
+					<div>kvartirylux.brest@gmail.com</div>
 				</div>
 				<div className="mb-[32rem] lg:mb-0 font-font2 font-[400] text-[12rem] lg:text-[14rem] lg:leading-[19rem] leading-[17rem] text-[#575757] lg:order-2 ">
 					© 2023 Deluxe Apart.

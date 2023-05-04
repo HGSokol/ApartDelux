@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef, Dispatch, SetStateAction } from 'react';
+import { useState, useRef, Dispatch, SetStateAction } from 'react';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
+// import 'react-lazy-load-image-component/src/effects/blur.css';
 import { WiTime8 } from 'react-icons/wi';
 import { IoLocationOutline } from 'react-icons/io5';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
@@ -36,7 +37,7 @@ function SliderPopup(props: ApartProps) {
 	return (
 		<div
 			id="popup"
-			className={`relative  lg:text-[20rem] text-white position z-[1000] lg:w-[1120rem] lg:h-[661rem] bg-cover bg-no-repeat overflow-hidden
+			className={`relative lg:text-[20rem] text-white position z-[1000] lg:w-[1120rem] lg:h-[661rem] bg-cover bg-no-repeat overflow-hidden
 			${props.openSlider ? ' w-[343rem] h-[202rem]' : ' w-[343rem] h-[533rem]'}`}>
 			{!props.openSlider ? (
 				<div className="h-[100%] bg-white w-[100%] flex flex-row">
@@ -44,7 +45,7 @@ function SliderPopup(props: ApartProps) {
 						<>
 							<LazyLoadComponent>
 								<div
-									className=" bg-cover w-[343rem] lg:w-[448rem] bg-[-200rem]"
+									className="bg-cover w-[343rem] lg:w-[448rem] bg-[-200rem]"
 									style={{
 										backgroundImage: `url(${Apartaments[props.activeSlider].img})`,
 									}}></div>
@@ -66,11 +67,11 @@ function SliderPopup(props: ApartProps) {
 						</div>
 						<div
 							className={`flex  flex-col flex-wrap gap-[5rem] lg:gap-[6rem] mb-[18.5rem] 
-						${
-							isOddLength
-								? ` h-[108rem] lg:h-[140rem] lg:mb-[53rem]`
-								: ` h-[118rem] lg:h-[150rem] lg:mb-[33rem]`
-						}`}>
+							${
+								isOddLength
+									? ` h-[108rem] lg:h-[140rem] lg:mb-[53rem]`
+									: ` h-[118rem] lg:h-[150rem] lg:mb-[33rem]`
+							}`}>
 							{Apartaments[props.activeSlider].descriptions.map((description, index) => {
 								return (
 									<div key={index} className="flex flex-row gap-[12rem] items-top ">
@@ -97,15 +98,15 @@ function SliderPopup(props: ApartProps) {
 							})}
 						</div>
 						<div className="flex flex-row items-center gap-[13rem] lg:gap-[11rem] mb-[16rem] lg:mb-[14rem]">
-							<div className="s">
+							<div>
 								<WiTime8 className="w-[18rem] h-[18rem] text-[#C8C3C3]" />
 							</div>
-							<div className=" font-font2 font-[600] text-[14rem] lg:text-[16rem] leading-[20rem] lg:leading-[22rem] text-[#B99772]">
+							<div className="font-font2 font-[600] text-[14rem] lg:text-[16rem] leading-[20rem] lg:leading-[22rem] text-[#B99772]">
 								Заезд в любое время с 14:00.{' '}
 							</div>
 						</div>
 						<div className="flex flex-row items-center gap-[13rem] lg:gap-[11rem] mb-[26rem] lg:mb-[49rem]">
-							<div className="s">
+							<div>
 								<IoLocationOutline className="w-[18rem] h-[18rem] text-[#C8C3C3]" />
 							</div>
 							<div className="font-font2 font-[600] text-[14rem] lg:text-[16rem] leading-[20rem] lg:leading-[22rem] text-[#B99772]">
@@ -116,11 +117,11 @@ function SliderPopup(props: ApartProps) {
 							<div
 								onClick={() => props.setOpenSlider(true)}
 								className="group cursor-pointer duration-[500ms] hover:bg-[#B99772] lg:pl-[36rem] lg:hover:w-[210rem] w-[149rem] lg:w-[181rem] h-[45rem] lg:h-[56rem] bg-[#D6AF85] flex justify-center lg:justify-normal items-center font-font2 font-[600] text-[12rem] lg:text-[14rem] leading-[17rem] lg:leading-[19rem] text-[#FAFAFA]">
-								<div className="lg:mr-[14rem] font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
+								<div className="font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA] lg:mr-[14rem]">
 									Смотреть фото
 								</div>
 								{window.innerWidth > 1023 ? (
-									<div className="duration-[500ms] opacity-0 lg:group-hover:opacity-100 font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
+									<div className="font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA] duration-[500ms] opacity-0 lg:group-hover:opacity-100">
 										<HiOutlineArrowNarrowRight className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem]" />
 									</div>
 								) : null}
@@ -129,7 +130,7 @@ function SliderPopup(props: ApartProps) {
 					</div>
 				</div>
 			) : (
-				<div className="">
+				<div>
 					<div
 						className="flex flex-row absolute overflow-hidden duration-[300ms]"
 						style={{
@@ -139,11 +140,11 @@ function SliderPopup(props: ApartProps) {
 						}}>
 						{arr.map((_, i) => {
 							return (
-								<LazyLoadComponent>
+								<LazyLoadComponent key={i}>
 									<div
 										ref={ref}
 										key={i}
-										className="w-[343rem] h-[202rem] lg:w-[1120rem] lg:h-[661rem] bg-cover bg-no-repeat"
+										className="w-[343rem] h-[202rem] bg-cover bg-no-repeat lg:w-[1120rem] lg:h-[661rem]"
 										style={{
 											backgroundImage: `url(${Apartaments[props.activeSlider].photos[i]})`,
 										}}></div>
@@ -181,8 +182,7 @@ function SliderPopup(props: ApartProps) {
 								<div key={i}>
 									{currentImg === i ? (
 										<svg
-											width="20"
-											height="8"
+											className="w-[20rem] h-[8rem]"
 											viewBox="0 0 20 8"
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg">
@@ -190,7 +190,7 @@ function SliderPopup(props: ApartProps) {
 										</svg>
 									) : (
 										<svg
-											className="cursor-pointer"
+											className="cursor-pointer w-[8rem] h-[8rem]"
 											onClick={() => setCurrentImg(i)}
 											width="8"
 											height="8"

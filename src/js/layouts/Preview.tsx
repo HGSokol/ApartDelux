@@ -11,7 +11,7 @@ function Preview() {
 				<div className="flex flex-col">
 					<div className="flex flex-row justify-between mb-[48rem] lg:order-2 lg:gap-[85rem]">
 						<div className="flex flex-row gap-[28rem] justify-center items-center">
-							<div className="s">
+							<div>
 								<svg
 									className="w-[50rem] h-[57rem] lg:w-[62rem] lg:h-[68rem]"
 									viewBox="0 0 52 57"
@@ -33,7 +33,7 @@ function Preview() {
 							</div>
 						</div>
 						<div className="flex flex-row gap-[28rem] justify-center items-center">
-							<div className="s">
+							<div>
 								<svg
 									className="w-[50rem] h-[57rem] lg:w-[62rem] lg:h-[68rem]"
 									viewBox="0 0 50 57"
@@ -68,7 +68,7 @@ function Preview() {
 						самом сердце г. Бреста. Мы предлагаем Вам все удобства, необходимые для проживания как
 						на короткий, так и на длительный срок.
 					</div>
-					<div className="a">
+					<div>
 						Мы предлагаем Вам все удобства, необходимые для проживания как на короткий, так и на
 						длительный срок.
 					</div>
