@@ -63,8 +63,15 @@ function Galery(props: ApartProps) {
                     props.setActivePopup(true);
                     props.setActiveSlider(index);
                   }}
-                  className="relative bg-[-110rem] lg:bg-[-230rem] font-font2 bg-cover bg-no-repeat font-[400] text-[16rem] leading-[20rem] snap-center text-[#FAFAFA] w-[255rem] h-[400rem] lg:w-[360rem] lg:h-[635rem] "
-                  style={{ backgroundImage: `url(${apartament.img})` }}
+                  className={`relative font-font2 bg-cover bg-no-repeat font-[400] text-[16rem] leading-[20rem] snap-center text-[#FAFAFA] w-[255rem] h-[400rem] lg:w-[360rem] lg:h-[635rem] 
+                  ${index === 8 ? ' ' : ' bg-[-110rem] lg:bg-[-230rem]'}`}
+                  style={{
+                    backgroundImage: `url(${apartament.img})`,
+                    backgroundPosition:
+                      window.innerWidth < 1024
+                        ? `${apartament.galerySetting[0]}`
+                        : `${apartament.galerySetting[1]}`,
+                  }}
                 >
                   <div className="absolute w-[100%] h-[100%] bg-black/[0.4] duration-[500ms] hover:bg-black/[0]"></div>
                   <div className="pt-[19rem] pl-[21rem] lg:pl-[30rem] lg:pt-[30rem] w-[92rem] h-[35rem] lg:w-[100rem] lg:h-[40rem]">

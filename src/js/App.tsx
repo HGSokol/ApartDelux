@@ -49,6 +49,8 @@ export interface Idata {
   descriptions: string[];
   adress: string;
   photos: string[];
+  galerySetting: [string, string];
+  photosSetting: [string, string][];
 }
 
 export const Apartaments: Idata[] = [
@@ -70,9 +72,16 @@ export const Apartaments: Idata[] = [
     ],
     adress: 'Адрес ул 17 сентября, 12',
     photos: [img1_1, img1_2, img1_3, img1_4],
+    photosSetting: [
+      ['', ''],
+      ['', ''],
+      ['', ''],
+      ['', ''],
+    ],
+    galerySetting: ['-220rem 0rem', '-400rem 0rem'],
   },
   {
-    img: img2_1,
+    img: img2_3,
     name: 'Deluxe Apart 2',
     descriptions: [
       '1 диван-кровать',
@@ -89,6 +98,13 @@ export const Apartaments: Idata[] = [
     ],
     adress: 'Адрес ул 17 сентября, 12',
     photos: [img2_1, img2_2, img2_3, img2_4],
+    photosSetting: [
+      ['', ''],
+      ['', ''],
+      ['', ''],
+      ['0rem -220rem ', '0rem -800rem'],
+    ],
+    galerySetting: ['-130rem 0rem', '-200rem 0rem'],
   },
   {
     img: img3_1,
@@ -107,6 +123,13 @@ export const Apartaments: Idata[] = [
     ],
     adress: 'Адрес ул 17 сентября, 12',
     photos: [img3_1, img3_2, img3_3, img3_4],
+    photosSetting: [
+      ['', ''],
+      ['', ''],
+      ['0rem -250rem', '0rem -900rem'],
+      ['', ''],
+    ],
+    galerySetting: ['-150rem 0rem', '-300rem 0rem'],
   },
   {
     img: img4_1,
@@ -125,6 +148,13 @@ export const Apartaments: Idata[] = [
     ],
     adress: 'Адрес ул 17 сентября, 12',
     photos: [img4_1, img4_2, img4_3, img4_4],
+    photosSetting: [
+      ['', ''],
+      ['', ''],
+      ['', ''],
+      ['', ''],
+    ],
+    galerySetting: ['-140rem 0rem', '-270rem 0rem'],
   },
   {
     img: img5_1,
@@ -144,6 +174,13 @@ export const Apartaments: Idata[] = [
     ],
     adress: 'Адрес ул. Дзержинского, 34',
     photos: [img5_1, img5_2, img5_3, img5_4],
+    photosSetting: [
+      ['', ''],
+      ['', ''],
+      ['', ''],
+      ['', ''],
+    ],
+    galerySetting: ['-170rem 0rem', '-250rem 0rem'],
   },
   {
     img: img6_1,
@@ -162,6 +199,13 @@ export const Apartaments: Idata[] = [
     ],
     adress: 'Адрес ул 17 сентября, 12',
     photos: [img6_1, img6_2, img6_3, img6_4],
+    photosSetting: [
+      ['', ''],
+      ['', ''],
+      ['', ''],
+      ['0rem -140rem', '0rem -500rem'],
+    ],
+    galerySetting: ['-170rem 0rem', '-250rem 0rem'],
   },
   {
     img: img7_1,
@@ -180,6 +224,13 @@ export const Apartaments: Idata[] = [
     ],
     adress: 'Адрес ул 17 сентября, 12',
     photos: [img7_1, img7_2, img7_3, img7_4],
+    photosSetting: [
+      ['', ''],
+      ['', ''],
+      ['', ''],
+      ['', ''],
+    ],
+    galerySetting: ['-170rem 0rem', '-250rem 0rem'],
   },
   {
     img: img8_1,
@@ -199,6 +250,13 @@ export const Apartaments: Idata[] = [
     ],
     adress: 'Адрес ул 17 сентября, 12',
     photos: [img8_1, img8_2, img8_3, img8_4],
+    photosSetting: [
+      ['', ''],
+      ['', ''],
+      ['', ''],
+      ['0rem -220rem', '0rem -900rem'],
+    ],
+    galerySetting: ['-140rem 0rem', '-280rem 0rem'],
   },
   {
     img: img9_1,
@@ -217,6 +275,13 @@ export const Apartaments: Idata[] = [
     ],
     adress: 'Адрес ул 17 сентября, 12',
     photos: [img9_1, img9_2, img9_3, img9_4],
+    photosSetting: [
+      ['', ''],
+      ['', ''],
+      ['', ''],
+      ['', ''],
+    ],
+    galerySetting: ['-10rem 0rem', '-20rem 0rem'],
   },
 ];
 

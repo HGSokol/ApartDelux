@@ -41,19 +41,19 @@ function SliderPopup(props: ApartProps) {
 			${props.openSlider ? ' w-[343rem] h-[202rem]' : ' w-[343rem] h-[533rem]'}`}
     >
       {!props.openSlider ? (
-        <div className="h-[100%] bg-white w-[100%] flex flex-row">
-          {window.innerWidth > 1023 ? (
-            <>
-              <LazyLoadComponent>
-                <div
-                  className="bg-cover w-[343rem] lg:w-[448rem] bg-[-200rem]"
-                  style={{
-                    backgroundImage: `url(${Apartaments[props.activeSlider].img})`,
-                  }}
-                ></div>
-              </LazyLoadComponent>
-            </>
-          ) : null}
+        <div className="h-[100%] bg-white w-[100%] lg:flex lg:flex-row">
+          <div className="hidden lg:flex">
+            <LazyLoadComponent>
+              <div
+                className={`bg-cover w-[343rem] lg:w-[448rem] 
+                `}
+                style={{
+                  backgroundImage: `url(${Apartaments[props.activeSlider].photos[0]})`,
+                  backgroundPosition: `${Apartaments[props.activeSlider].galerySetting[1]}`,
+                }}
+              ></div>
+            </LazyLoadComponent>
+          </div>
           <div className="py-[24rem] px-[16rem] lg:p-[48rem] w-[343rem] lg:w-[672rem]">
             <div className="font-font1 font-[400] text-[24rem] lg:text-[32rem] leading-[23rem] lg:leading-[31rem] text-[#1E1E1E] mb-[16rem] lg:mb-[32rem]">
               {Apartaments[props.activeSlider].name}
@@ -71,7 +71,7 @@ function SliderPopup(props: ApartProps) {
               className={`flex  flex-col flex-wrap gap-[5rem] lg:gap-[6rem] mb-[18.5rem] 
 							${
                 isOddLength
-                  ? ` h-[108rem] lg:h-[140rem] lg:mb-[53rem]`
+                  ? ` h-[115rem] lg:h-[140rem] lg:mb-[53rem]`
                   : ` h-[118rem] lg:h-[150rem] lg:mb-[33rem]`
               }`}
             >
@@ -80,8 +80,7 @@ function SliderPopup(props: ApartProps) {
                   <div key={index} className="flex flex-row gap-[12rem] items-top ">
                     <div className="pt-[5rem] lg:pt-[10rem]">
                       <svg
-                        width="12"
-                        height="2"
+                        className="w-[12rem] h-[2rem]"
                         viewBox="0 0 12 2"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -125,11 +124,9 @@ function SliderPopup(props: ApartProps) {
                 <div className="font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA] lg:mr-[14rem]">
                   Смотреть фото
                 </div>
-                {window.innerWidth > 1023 ? (
-                  <div className="font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA] duration-[500ms] opacity-0 lg:group-hover:opacity-100">
-                    <HiOutlineArrowNarrowRight className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem]" />
-                  </div>
-                ) : null}
+                <div className="hidden lg:flex font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA] duration-[500ms] opacity-0 lg:group-hover:opacity-100">
+                  <HiOutlineArrowNarrowRight className="w-[19.5rem] h-[19.5rem] lg:w-[22rem] lg:h-[22rem]" />
+                </div>
               </div>
             </div>
           </div>
@@ -153,6 +150,10 @@ function SliderPopup(props: ApartProps) {
                     className="w-[343rem] h-[202rem] bg-cover bg-center bg-no-repeat lg:w-[1120rem] lg:h-[661rem]"
                     style={{
                       backgroundImage: `url(${Apartaments[props.activeSlider].photos[i]})`,
+                      backgroundPosition:
+                        window.innerWidth < 1024
+                          ? `${Apartaments[props.activeSlider].photosSetting[i][0]}`
+                          : `${Apartaments[props.activeSlider].photosSetting[i][1]}`,
                     }}
                   ></div>
                 </LazyLoadComponent>
