@@ -42,23 +42,23 @@ function Header() {
           <div className="hidden lg:flex lg:flex-row lg:gap-[29rem] lg:absolute lg:translate-x-[618rem] lg:translate-y-[590rem]">
             <LazyLoadComponent>
               <div
-                className="bg-cover bg-no-repeat bg-[-25rem] lg:w-[225rem] lg:h-[209rem]"
+                className="bg-cover bg-no-repeat bg-[-45rem] lg:w-[225rem] lg:h-[209rem]"
                 style={{
-                  backgroundImage: `url(${Apartaments[1].img})`,
+                  backgroundImage: `url(${Apartaments[2].photos[0]})`,
                 }}
               ></div>
             </LazyLoadComponent>
             <LazyLoadComponent>
               <div
-                className="bg-cover bg-no-repeat bg-[-30rem] lg:w-[225rem] lg:h-[209rem]"
+                className="bg-cover bg-no-repeat lg:bg-[-45rem] lg:w-[225rem] lg:h-[209rem]"
                 style={{
-                  backgroundImage: `url(${Apartaments[5].img})`,
+                  backgroundImage: `url(${Apartaments[3].photos[1]})`,
                 }}
               ></div>
             </LazyLoadComponent>
             <LazyLoadComponent>
               <div
-                className="bg-cover bg-no-repeat bg-[-43rem] lg:w-[225rem] lg:h-[209rem]"
+                className="bg-cover bg-no-repeat lg:bg-[-90rem] lg:w-[225rem] lg:h-[209rem]"
                 style={{
                   backgroundImage: `url(${Apartaments[0].img})`,
                 }}

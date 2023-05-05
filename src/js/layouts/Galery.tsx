@@ -48,37 +48,42 @@ function Galery(props: ApartProps) {
           </svg>
         </div>
       </div>
-      <div className="overflow-x-scroll lg:overflow-hidden snap-proximity -wekbit-scrollbar:w-[0rem]">
+      <div className="overflow-hidden">
         <div
-          className="relative flex flex-row w-max gap-[16rem] lg:gap-0 cursor-pointer duration-[600ms]"
+          className="overflow-x-scroll w-screen snap-x snap-mandatory relative flex flex-row gap-[16rem] lg:gap-0 cursor-pointer duration-[600ms]"
           style={{
             transform: `translateX(-${currentSliderList * 360}rem)`,
           }}
         >
           {Apartaments.map((apartament, index) => {
             return (
-              <LazyLoadComponent key={index}>
-                <div
-                  onClick={() => {
-                    props.setActivePopup(true);
-                    props.setActiveSlider(index);
-                  }}
-                  className={`relative font-font2 bg-cover bg-no-repeat font-[400] text-[16rem] leading-[20rem] snap-center text-[#FAFAFA] w-[255rem] h-[400rem] lg:w-[360rem] lg:h-[635rem] 
-                  ${index === 8 ? ' ' : ' bg-[-110rem] lg:bg-[-230rem]'}`}
-                  style={{
-                    backgroundImage: `url(${apartament.img})`,
-                    backgroundPosition:
-                      window.innerWidth < 1024
-                        ? `${apartament.galerySetting[0]}`
-                        : `${apartament.galerySetting[1]}`,
-                  }}
-                >
-                  <div className="absolute w-[100%] h-[100%] bg-black/[0.4] duration-[500ms] hover:bg-black/[0]"></div>
-                  <div className="pt-[19rem] pl-[21rem] lg:pl-[30rem] lg:pt-[30rem] w-[92rem] h-[35rem] lg:w-[100rem] lg:h-[40rem]">
-                    {apartament.name}
+              <div
+                className="snap-center shrink-0 h-auto w-auto"
+                key={index}
+                onClick={() => {
+                  props.setActivePopup(true);
+                  props.setActiveSlider(index);
+                }}
+              >
+                <LazyLoadComponent>
+                  <div
+                    className={`relative font-font2 bg-cover bg-no-repeat font-[400] text-[16rem] leading-[20rem] snap-center text-[#FAFAFA] w-[255rem] h-[400rem] lg:w-[360rem] lg:h-[635rem] 
+                    ${index === 8 ? ' ' : ' bg-[-110rem] lg:bg-[-230rem]'}`}
+                    style={{
+                      backgroundImage: `url(${apartament.img})`,
+                      backgroundPosition:
+                        window.innerWidth < 1024
+                          ? `${apartament.galerySetting[0]}`
+                          : `${apartament.galerySetting[1]}`,
+                    }}
+                  >
+                    <div className="absolute w-[100%] h-[100%] bg-black/[0.4] duration-[500ms] lg:hover:bg-black/[0]"></div>
+                    <div className="pt-[19rem] pl-[21rem] lg:pl-[30rem] lg:pt-[30rem] w-[92rem] h-[35rem] lg:w-[100rem] lg:h-[40rem]">
+                      {apartament.name}
+                    </div>
                   </div>
-                </div>
-              </LazyLoadComponent>
+                </LazyLoadComponent>
+              </div>
             );
           })}
         </div>
