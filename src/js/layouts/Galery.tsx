@@ -50,7 +50,7 @@ function Galery(props: ApartProps) {
       </div>
       <div className="overflow-hidden">
         <div
-          className="overflow-x-scroll w-screen snap-x snap-mandatory relative flex flex-row gap-[16rem] lg:gap-0 cursor-pointer duration-[600ms]"
+          className="overflow-x-scroll lg:overflow-hidden w-screen lg:w-max snap-x snap-mandatory lg:snap-none relative flex flex-row gap-[16rem] lg:gap-0 cursor-pointer duration-[600ms]"
           style={{
             transform: `translateX(-${currentSliderList * 360}rem)`,
           }}
@@ -58,7 +58,7 @@ function Galery(props: ApartProps) {
           {Apartaments.map((apartament, index) => {
             return (
               <div
-                className="snap-center shrink-0 h-auto w-auto"
+                className="snap-center lg:snap-none shrink-0 h-auto w-auto"
                 key={index}
                 onClick={() => {
                   props.setActivePopup(true);
@@ -77,9 +77,10 @@ function Galery(props: ApartProps) {
                           : `${apartament.galerySetting[1]}`,
                     }}
                   >
-                    <div className="absolute w-[100%] h-[100%] bg-black/[0.4] duration-[500ms] lg:hover:bg-black/[0]"></div>
-                    <div className="pt-[19rem] pl-[21rem] lg:pl-[30rem] lg:pt-[30rem] w-[92rem] h-[35rem] lg:w-[100rem] lg:h-[40rem]">
-                      {apartament.name}
+                    <div className="absolute w-[100%] h-[100%] bg-black/[0.4] duration-[500ms] lg:hover:bg-black/[0]">
+                      <div className="pt-[19rem] pl-[21rem] lg:pl-[30rem] lg:pt-[30rem] w-[92rem] h-[35rem] lg:w-[100rem] lg:h-[40rem]">
+                        {apartament.name}
+                      </div>
                     </div>
                   </div>
                 </LazyLoadComponent>

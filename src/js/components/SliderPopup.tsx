@@ -71,7 +71,7 @@ function SliderPopup(props: ApartProps) {
               className={`flex  flex-col flex-wrap gap-[5rem] lg:gap-[6rem] mb-[18.5rem] 
 							${
                 isOddLength
-                  ? ` h-[115rem] lg:h-[140rem] lg:mb-[53rem]`
+                  ? ` h-[112rem] lg:h-[140rem] lg:mb-[53rem]`
                   : ` h-[118rem] lg:h-[150rem] lg:mb-[33rem]`
               }`}
             >
