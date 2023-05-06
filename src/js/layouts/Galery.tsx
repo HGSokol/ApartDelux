@@ -22,8 +22,8 @@ function Galery(props: ApartProps) {
 	};
 
 	return (
-		<div id="galery" className="relative mb-[120rem] lg:mb-[200rem]">
-			<div className="ml-[16rem] lg:ml-[202rem] font-font1 font-[700] text-[32rem] lg:text-[48rem] leading-[31rem] lg:leading-[46rem] text-[#FAFAFA] mb-[48rem] lg:mb-[13rem]">
+		<div id="galery" className="pt-[60rem] lg:pt-[80rem] relative mb-[60rem] lg:mb-[100rem]">
+			<div className="tracking-[0.015em] ml-[16rem] lg:ml-[202rem] font-font1 font-[700] text-[32rem] lg:text-[46rem] leading-[31rem] lg:leading-[46rem] text-[#FAFAFA] mb-[48rem] lg:mb-[13rem]">
 				Галерея
 			</div>
 			<div className="hidden lg:flex right-0 w-full justify-end pr-[101rem] mb-[37rem] gap-[28rem]">
@@ -73,7 +73,7 @@ function Galery(props: ApartProps) {
 													: `${apartament.galerySetting[1]}`,
 										}}>
 										<div className="absolute w-[100%] h-[100%] bg-black/[0.4] duration-[500ms] lg:hover:bg-black/[0]">
-											<div className="pt-[19rem] pl-[21rem] lg:pl-[30rem] lg:pt-[30rem] w-[92rem] h-[35rem] lg:w-[100rem] lg:h-[40rem]">
+											<div className="uppercase tracking-[0.015em] font-font1 font-[400] text-[16rem] leading-[20rem] pt-[19rem] pl-[21rem] lg:pl-[30rem] lg:pt-[30rem] w-[95rem] h-[65rem] lg:w-[105rem] lg:h-[40rem]">
 												{apartament.name}
 											</div>
 										</div>

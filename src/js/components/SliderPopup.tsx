@@ -55,7 +55,7 @@ function SliderPopup(props: ApartProps) {
 						<div className="font-font1 font-[400] text-[24rem] lg:text-[32rem] leading-[23rem] lg:leading-[31rem] text-[#1E1E1E] mb-[16rem] lg:mb-[32rem]">
 							{Apartaments[props.activeSlider].name}
 						</div>
-						<div className="font-font2 font-[400] text-[14rem] lg:text-[14rem] leading-[17rem] lg:leading-[20rem] text-[#575757] mb-[12rem] lg:mb-[18rem]">
+						<div className="tracking-[0.06em] font-font2 font-[400] text-[12rem] lg:text-[14rem] leading-[17rem] lg:leading-[20rem] text-[#575757] mb-[12rem] lg:mb-[18rem]">
 							Апартаменты идеально подойдут для командировок и туристического отдыха. Во дворе есть
 							детская площадка и бесплатная охраняемая парковка. Весь двор оборудован
 							видеонаблюдением. В здании дома находится фитнес-центр, салон красоты, офис такси,
@@ -99,7 +99,7 @@ function SliderPopup(props: ApartProps) {
 							<div>
 								<WiTime8 className="w-[18rem] h-[18rem] text-[#C8C3C3]" />
 							</div>
-							<div className="font-font2 font-[600] text-[14rem] lg:text-[16rem] leading-[20rem] lg:leading-[22rem] text-[#B99772]">
+							<div className="tracking-[0.06em] font-font2 font-[600] text-[14rem] lg:text-[16rem] leading-[20rem] lg:leading-[22rem] text-[#B99772]">
 								Заезд в любое время с 14:00.{' '}
 							</div>
 						</div>
@@ -107,7 +107,7 @@ function SliderPopup(props: ApartProps) {
 							<div>
 								<IoLocationOutline className="w-[18rem] h-[18rem] text-[#C8C3C3]" />
 							</div>
-							<div className="font-font2 font-[600] text-[14rem] lg:text-[16rem] leading-[20rem] lg:leading-[22rem] text-[#B99772]">
+							<div className="tracking-[0.06em] font-font2 font-[600] text-[14rem] lg:text-[16rem] leading-[20rem] lg:leading-[22rem] text-[#B99772]">
 								ул. 17 сентября, 12
 							</div>
 						</div>

@@ -5,8 +5,8 @@ import { Apartaments } from '../App';
 
 function Header() {
 	return (
-		<div className="mb-[80rem] lg:mb-[149rem] overflow-hidden">
-			<div className=" px-[16rem] pt-[24rem] bg-[length:760rem_640rem] bg-[-245rem] bg-no-repeat bg-[url('../img/header1_1.png')] lg:bg-none transition duration-[400ms] h-[640rem] lg:h-[900rem] lg:flex lg:flex-row mb-[36rem] lg:mb-[0rem] flex flex-row justify-between flex-wrap lg:flex-nowrap lg:justify-normal lg:pt-0 lg:pl-[41rem]">
+		<div className="mb-[80rem] lg:mb-[80rem] overflow-hidden">
+			<div className=" px-[16rem] lg:px-[0rem] pt-[24rem] bg-[length:760rem_640rem] bg-[-245rem] bg-no-repeat bg-[url('../img/header1_1.png')] lg:bg-none transition duration-[400ms] h-[640rem] lg:h-[900rem] lg:flex lg:flex-row mb-[36rem] lg:mb-[0rem] flex flex-row justify-between flex-wrap lg:flex-nowrap lg:justify-normal lg:pt-0 lg:pl-[41rem]">
 				<div className="flex flex-row gap-[11rem] items-center h-[17rem] lg:order-3 lg:pr-[100rem] lg:pt-[38rem]">
 					<div>
 						<svg
@@ -22,13 +22,13 @@ function Header() {
 							/>
 						</svg>
 					</div>
-					<div className="font-font2 font-[400] text-[14rem] leading-[19rem] text-[#C8C3C3] ">
+					<div className="lg: font-font2 font-[400] text-[14rem]  lg:text-[16rem] leading-[19rem] text-[#C8C3C3] ">
 						+375 (29) 221-00-00
 					</div>
 				</div>
 				<div className="w-max flex flex-col lg:items-center lg:pt-[40rem] lg:order-1 lg:mr-[41rem] lg:w-[40rem]">
 					<div className="hidden lg:flex lg:flex-col lg:gap-[27rem] lg:mb-[83rem]">
-						<div className="lg:relative mode lg:-rotate-180 lg:font-font1 lg:font-[300] lg:text-[16rem] lg:text-[#FFFFFF] lg:whitespace-nowrap">
+						<div className="uppercase lg:relative mode lg:-rotate-180 lg:font-font1 lg:font-[300] lg:text-[16rem] lg:text-[#FFFFFF] lg:whitespace-nowrap">
 							<div>Deluxe Apart</div>
 						</div>
 					</div>
@@ -98,32 +98,32 @@ function Header() {
 					<div className="hidden lg:flex lg:flex-row lg:gap-[48rem] lg:font-font2 lg:font-[700rem] lg:text-[16rem] lg:leading-[22rem] lg:mb-[145rem]">
 						<a
 							href={'#about'}
-							className="duration-[400ms] cursor-pointer text-[#C8C3C3] hover:text-[#D6AF85]">
+							className="duration-[400ms] tracking-[0.06em] cursor-pointer text-[#C8C3C3] hover:text-[#D6AF85]">
 							О нас
 						</a>
 						<a
 							href={'#galery'}
-							className="duration-[400ms] cursor-pointer text-[#C8C3C3] hover:text-[#D6AF85]">
+							className="duration-[400ms] tracking-[0.06em] cursor-pointer text-[#C8C3C3] hover:text-[#D6AF85]">
 							Галерея
 						</a>
 						<a
 							href={'#contacts'}
-							className="duration-[400ms] cursor-pointer text-[#C8C3C3] hover:text-[#D6AF85]">
+							className="duration-[400ms] tracking-[0.06em] cursor-pointer text-[#C8C3C3] hover:text-[#D6AF85]">
 							Контакты
 						</a>
 					</div>
 					<div className="">
-						<div className="pt-[90rem] lg:pt-[0rem] font-font1 font-[700rem] text-[48rem] lg:text-[128rem] leading-[46rem] lg:leading-[123rem] lg:tracking-[2.1rem] text-[#FAFAFA] mb-[24rem] lg:mb-[49rem]">
+						<div className="tracking-[0.06em] pt-[92rem] lg:pt-[0rem] font-font1 font-[700rem] text-[48rem] lg:text-[128rem] leading-[46rem] lg:leading-[123rem] lg:tracking-[2.1rem] text-[#FAFAFA] mb-[24rem] lg:mb-[49rem]">
 							Deluxe Apartments
 						</div>
-						<div className="w-[290rem] font-font2 font-[400rem] text-[14rem] lg:text-[16rem] leading-[19rem] lg:leading-[22rem] lg:w-[440rem] text-[#FAFAFA] mb-[48rem] lg:mb-[68rem]">
+						<div className="w-[340rem] tracking-[0.06em] font-font2 font-[400rem] text-[14rem] lg:text-[16rem] leading-[20rem] lg:leading-[22rem] lg:w-[561rem] text-[#FAFAFA] mb-[48rem] lg:mb-[68rem]">
 							Апартаменты являются частью элитного квартирного комплекса и находятся в самом центре
 							города Бреста.
 						</div>
 						<a
 							href={'#contacts'}
 							className="group cursor-pointer duration-[500ms] hover:bg-[#B99772] lg:pl-[36rem] lg:hover:w-[232rem] w-full lg:w-[200rem] h-[56rem] bg-[#D6AF85] flex flex-row justify-center lg:justify-normal  items-center ">
-							<div className="lg:mr-[18rem] font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
+							<div className=" lg:mr-[18rem] font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">
 								Связаться с нами
 							</div>
 							<div className="hidden lg:flex duration-[500ms] opacity-0 lg:group-hover:opacity-100 font-font2 font-[600] text-[14rem] leading-[19rem] text-[#FAFAFA]">

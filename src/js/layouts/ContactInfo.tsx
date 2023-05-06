@@ -2,8 +2,8 @@ function ContactInfo() {
 	return (
 		<div
 			id="contacts"
-			className="mx-[16rem] lg:mx-[496rem] flex flex-col items-center mb-[139rem] lg:mb-[204rem]">
-			<div className="font-font1 font-[700] text-[32rem] lg:text-[48rem] leading-[31rem] lg:leading-[46rem] text-[#FAFAFA] mb-[52rem]">
+			className="pt-[60rem] lg:pt-[100rem] mx-[16rem] lg:mx-[496rem] flex flex-col items-center mb-[139rem] lg:mb-[204rem]">
+			<div className="tracking-[0.015em] font-font1 font-[700] text-[32rem] lg:text-[48rem] leading-[31rem] lg:leading-[46rem] text-[#FAFAFA] mb-[52rem]">
 				Связаться с нами
 			</div>
 			<div className="flex flex-col items-center">
@@ -23,10 +23,10 @@ function ContactInfo() {
 							/>
 						</svg>
 					</div>
-					<div className="text-[#D6AF85] font-font2 font-[400] text-[16rem] leading-[22rem]">
+					<div className="text-[#D6AF85] font-font2 font-[400] text-[16rem] lg:text-[20rem] tracking-[0.06em] lg:leading-[27rem] leading-[22rem]">
 						+375 (29) 221-00-00
 					</div>
-					<div className="text-[#D6AF85] font-font2 font-[400] text-[16rem] leading-[22rem]">
+					<div className="text-[#D6AF85] font-font2 font-[400] text-[16rem] lg:text-[20rem] tracking-[0.06em] lg:leading-[27rem] leading-[22rem]">
 						(Ксения)
 					</div>
 				</div>
@@ -45,7 +45,7 @@ function ContactInfo() {
 							/>
 						</svg>
 					</div>
-					<div className="text-[#D6AF85] font-font2 font-[400] text-[16rem] leading-[22rem]">
+					<div className="text-[#D6AF85] font-font2 font-[400] text-[16rem] lg:text-[20rem] lg:leading-[27rem] tracking-[0.06em] leading-[22rem]">
 						kvartirylux.brest@gmail.com
 					</div>
 				</div>
