@@ -113,7 +113,7 @@ function Header() {
 						</a>
 					</div>
 					<div className="">
-						<div className="tracking-[0.06em] pt-[92rem] lg:pt-[0rem] font-font1 font-[700rem] text-[48rem] lg:text-[128rem] leading-[46rem] lg:leading-[123rem] lg:tracking-[2.1rem] text-[#FAFAFA] mb-[24rem] lg:mb-[49rem]">
+						<div className="tracking-[0.015em] pt-[92rem] lg:pt-[0rem] font-font1 font-[700] text-[48rem] lg:text-[128rem] leading-[46rem] lg:leading-[123rem] lg:tracking-[2.1rem] text-[#FAFAFA] mb-[24rem] lg:mb-[49rem]">
 							Deluxe Apartments
 						</div>
 						<div className="w-[340rem] tracking-[0.06em] font-font2 font-[400rem] text-[14rem] lg:text-[16rem] leading-[20rem] lg:leading-[22rem] lg:w-[561rem] text-[#FAFAFA] mb-[48rem] lg:mb-[68rem]">

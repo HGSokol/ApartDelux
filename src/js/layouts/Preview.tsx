@@ -24,7 +24,7 @@ function Preview() {
 								</svg>
 							</div>
 							<div>
-								<div className="font-font1 font-[400] text-[32rem] lg:text-[50rem] leading-[37rem] lg:leading-[59rem] text-[#FFFFFF] mb-[4rem] lg:mb-0">
+								<div className="font-font1 font-[700] text-[32rem] lg:text-[50rem] leading-[37rem] lg:leading-[59rem] text-[#FFFFFF] mb-[4rem] lg:mb-0">
 									9+
 								</div>
 								<div className="tracking-[0.06em] font-font2 font-[400] text-[14rem] lg:text-[16rem] lg:leading-[22rem] leading-[19rem] text-[#C4C4C4]">
@@ -49,7 +49,7 @@ function Preview() {
 								</svg>
 							</div>
 							<div>
-								<div className="font-font1 font-[400] text-[32rem] lg:text-[50rem] leading-[37rem] lg:leading-[59rem] text-[#FFFFFF] mb-[4rem] lg:mb-0">
+								<div className="font-font1 font-[700] text-[32rem] lg:text-[50rem] leading-[37rem] lg:leading-[59rem] text-[#FFFFFF] mb-[4rem] lg:mb-0">
 									109+
 								</div>
 								<div className="tracking-[0.06em] font-font2 font-[400] text-[14rem] lg:text-[16rem] lg:leading-[22rem] leading-[19rem] text-[#C4C4C4]">
