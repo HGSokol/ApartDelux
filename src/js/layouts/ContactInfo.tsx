@@ -1,3 +1,6 @@
+import { BsWhatsapp } from 'react-icons/bs';
+import { SiViber } from 'react-icons/si';
+
 function ContactInfo() {
 	return (
 		<div
@@ -26,9 +29,6 @@ function ContactInfo() {
 					<div className="text-[#D6AF85] font-font2 font-[400] text-[16rem] lg:text-[20rem] tracking-[0.06em] lg:leading-[27rem] leading-[22rem]">
 						+375 (29) 221-00-00
 					</div>
-					<div className="text-[#D6AF85] font-font2 font-[400] text-[16rem] lg:text-[20rem] tracking-[0.06em] lg:leading-[27rem] leading-[22rem]">
-						(Ксения)
-					</div>
 				</div>
 				<div className="mb-[28rem] flex flex-row gap-[18rem] items-center">
 					<div>
@@ -52,7 +52,10 @@ function ContactInfo() {
 			</div>
 			<div className="w-[91rem] h-[1rem] bg-[#575757] mb-[27rem]"></div>
 			<div className="flex flex-row gap-[24rem] lg:gap-[38rem]">
-				<a href={'#'} target="_blank" className="cursor-pointer">
+				<a
+					href={'https://www.instagram.com/kvartira.brest.nasutki/'}
+					target="_blank"
+					className="cursor-pointer">
 					<svg
 						className="w-[23rem] h-[23rem] fill-[#C8C3C3] hover:fill-[#D6AF85]"
 						viewBox="0 0 22 22"
@@ -61,7 +64,8 @@ function ContactInfo() {
 						<path d="M16.9583 4.29167C16.5441 4.29167 16.2083 4.62745 16.2083 5.04167C16.2083 5.45588 16.5441 5.79167 16.9583 5.79167V4.29167ZM16.9692 5.79167C17.3834 5.79167 17.7192 5.45588 17.7192 5.04167C17.7192 4.62745 17.3834 4.29167 16.9692 4.29167V5.79167ZM15.6667 11C15.6667 13.5773 13.5773 15.6667 11 15.6667V17.1667C14.4058 17.1667 17.1667 14.4058 17.1667 11H15.6667ZM11 15.6667C8.42267 15.6667 6.33333 13.5773 6.33333 11H4.83333C4.83333 14.4058 7.59424 17.1667 11 17.1667V15.6667ZM6.33333 11C6.33333 8.42267 8.42267 6.33333 11 6.33333V4.83333C7.59424 4.83333 4.83333 7.59424 4.83333 11H6.33333ZM11 6.33333C13.5773 6.33333 15.6667 8.42267 15.6667 11H17.1667C17.1667 7.59424 14.4058 4.83333 11 4.83333V6.33333ZM4.5 2H17.5V0.5H4.5V2ZM20 4.5V17.5H21.5V4.5H20ZM17.5 20H4.5V21.5H17.5V20ZM2 17.5V4.5H0.5V17.5H2ZM4.5 20C3.11929 20 2 18.8807 2 17.5H0.5C0.5 19.7091 2.29086 21.5 4.5 21.5V20ZM20 17.5C20 18.8807 18.8807 20 17.5 20V21.5C19.7091 21.5 21.5 19.7091 21.5 17.5H20ZM17.5 2C18.8807 2 20 3.11929 20 4.5H21.5C21.5 2.29086 19.7091 0.5 17.5 0.5V2ZM4.5 0.5C2.29086 0.5 0.5 2.29086 0.5 4.5H2C2 3.11929 3.11929 2 4.5 2V0.5ZM16.9583 5.79167H16.9692V4.29167H16.9583V5.79167ZM16.75 5.04167C16.75 4.92661 16.8433 4.83333 16.9583 4.83333V6.33333C17.6717 6.33333 18.25 5.75503 18.25 5.04167H16.75ZM16.9583 4.83333C17.0734 4.83333 17.1667 4.92661 17.1667 5.04167H15.6667C15.6667 5.75503 16.245 6.33333 16.9583 6.33333V4.83333ZM17.1667 5.04167C17.1667 5.15673 17.0734 5.25 16.9583 5.25V3.75C16.245 3.75 15.6667 4.3283 15.6667 5.04167H17.1667ZM16.9583 5.25C16.8433 5.25 16.75 5.15673 16.75 5.04167H18.25C18.25 4.3283 17.6717 3.75 16.9583 3.75V5.25Z" />
 					</svg>
 				</a>
-				<a href={'#'} target="_blank" className="cursor-pointer">
+				{/* телеграм */}
+				<a href={'https://t.me/luxkvartiry'} target="_blank" className="cursor-pointer">
 					<svg
 						className="w-[25rem] h-[22rem] stroke-[#C8C3C3] hover:stroke-[#D6AF85]"
 						viewBox="0 0 24 22"
@@ -74,18 +78,13 @@ function ContactInfo() {
 						/>
 					</svg>
 				</a>
-				<a href={'#'} target="_blank" className="cursor-pointer">
-					<svg
-						className="w-[23rem] h-[23rem] stroke-[#C8C3C3] hover:stroke-[#D6AF85]"
-						viewBox="0 0 22 22"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M12.0833 20.75V9.05C12.0833 7.73372 13.1504 6.66667 14.4667 6.66667H15.875M8.83333 12.0833H15.3333M4.5 20.75H17.5C19.2949 20.75 20.75 19.2949 20.75 17.5V4.5C20.75 2.70507 19.2949 1.25 17.5 1.25H4.5C2.70507 1.25 1.25 2.70508 1.25 4.5V17.5C1.25 19.2949 2.70508 20.75 4.5 20.75Z"
-							strokeWidth="1.5"
-							strokeLinecap="round"
-						/>
-					</svg>
+				{/* ватсап */}
+				<a href={'https://wa.me/8029221000'} target="_blank" className="cursor-pointer">
+					<BsWhatsapp className="w-[25rem] h-[22rem] text-[#C8C3C3] hover:text-[#D6AF85]" />
+				</a>
+				{/* вайбер */}
+				<a href={'viber://chat?number=%2B375292210000'} target="_blank" className="cursor-pointer">
+					<SiViber className="w-[23rem] h-[23rem] text-[#C8C3C3] hover:text-[#D6AF85]" />
 				</a>
 			</div>
 		</div>
